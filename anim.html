@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2D Animation UI</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+    }
 
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .canvas-container {
+      width: 500px;
+      height: 500px;
+      background-color: white;
+    }
+
+    .canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    .controls {
+      width: 200px;
+      height: 500px;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .button {
+      width: 100%;
+      height: 50px;
+      background-color: #000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .color-picker {
+      width: 100%;
+      height: 50px;
+      background-color: #000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .shape-selector {
+      width: 100%;
+      height: 50px;
+      background-color: #000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .background-image-input {
+      width: 100%;
+      height: 50px;
+      background-color: #000;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-container">
+  <input type="range" id="timeline" min="0" max="100" value="0">
+</div>
+  <script> 
+  // Add a timeline to the UI
+const timeline = document.getElementById('timeline');
+
+// Add an event listener for the timeline input
+timeline.addEventListener('change', (e) => {
+  // Update the frame based on the timeline value
+  frame = e.target.value;
+
+  // Update the frame input
+  document.getElementById('frame').value = frame;
+
+  // Redraw the animation
+  animate();
+});
+  </script>
+  <div class="container">
+    <div class="canvas-container">
+      <canvas class="canvas" id="canvas"></canvas>
+    </div>
+    <div class="controls">
+      <h2>Controls</h2>
+      <button class="button" id="play-button">Play</button>
+      <button class="button" id="pause-button">Pause</button>
+      <button class="button" id="clear-button">Clear</button>
+      <br>
+      <label for="fps">FPS:</label>
+      <input type="number" id="fps" value="60">
+      <br>
+      <label for="frame">Frame:</label>
+      <input type="number" id="frame" value="0">
+      <br>
+      <label for="color">Color:</label>
+      <input type="color" id="color">
+      <br>
+      <label for="shape">Shape:</label>
+      <select id="shape">
+        <option value="circle">Circle</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+      </select>
+      <br>
+      <label for="background-image">Background Image:</label>
+      <input type="file" id="background-image">
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    let animationId = null;
+    let isPlaying = false;
+    let frame = 0;
+    let fps = 60;
+    let color = '#000000';
+    let shape = 'circle';
+    let backgroundImage = null;
+
+    // Set the canvas size
+    canvas.width = 500;
+    canvas.height = 500;
+
+    // Add event listeners for the buttons
+    document.getElementById('play-button').addEventListener('click', () => {
+      if (!isPlaying) {
+        isPlaying = true;
+        animate();
+      }
+    });
+
+    document.getElementById('pause-button').addEventListener('click', () => {
+      if (isPlaying) {
+        isPlaying = false;
+      }
+    });
+
+    document.getElementById('clear-button').addEventListener('click', () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      frame = 0;
+      document.getElementById('frame').value = frame;
+    });
+
+    // Add event listener for the FPS input
+    document.getElementById('fps').addEventListener('change', (e) => {
+      fps = e.target.value;
+    });
+
+    // Add event listener for the frame input
+    document.getElementById('frame').addEventListener('change', (e) => {
+      frame = e.target.value;
+    });
+
+    // Add event listener for the color input
+    document.getElementById('color').addEventListener('change', (e) => {
+      color = e.target.value;
+    });
+
+    // Add event listener for the shape input
+    document.getElementById('shape').addEventListener('change', (e) => {
+      shape = e.target.value;
+    });
+
+    // Add event listener for the background image input
+    document.getElementById('background-image').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        backgroundImage = reader.result;
+      };
+
+      reader.readAsDataURL(file);
+    });
+
+    // Function to animate the canvas
+    function animate() {
+      if (!isPlaying) {
+        return;
+      }
+
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw the background image
+      if (backgroundImage) {
+        ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+      }
+
+      // Draw the shape
+      ctx.beginPath();
+      switch (shape) {
+        case 'circle':
+          ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, 2 * Math.PI);
+          break;
+        case 'square':
+          ctx.rect(canvas.width / 2 - 50, canvas.height / 2 - 50, 100, 100);
+          break;
+        case 'triangle':
+          ctx.moveTo(canvas.width / 2, canvas.height / 2 - 50);
+          ctx.lineTo(canvas.width / 2 + 50, canvas.height / 2 + 50);
+          ctx.lineTo(canvas.width / 2 - 50, canvas.height / 2 + 50);
+          ctx.closePath();
+          break;
+      }
+      ctx.fillStyle = color;
+      ctx.fill();
+
+      // Update the frame count
+      frame++;
+
+      // Update the frame input
+      document.getElementById('frame').value = frame;
+
+      // Request the next animation frame
+      animationId = requestAnimationFrame(animate);
+    }
+
+    // Start the animation
+    animate();
+  </script>
+</body>
+</html>
