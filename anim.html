@@ -73,6 +73,71 @@
   </style>
 </head>
 <body>
+  <button class="button" id="export-video-button">Export Video</button>
+<button class="button" id="export-images-button">Export Images</button>
+  <script>
+    // Add event listener for the export video button
+document.getElementById('export-video-button').addEventListener('click', () => {
+  const video = document.getElementById('canvas');
+
+  // Create a new Blob object from the canvas data
+  const blob = canvas.toBlob();
+
+  // Create a new URL for the Blob object
+  const url = URL.createObjectURL(blob);
+
+  // Download the video
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'animation.mp4';
+  a.click();
+
+  // Revoke the object URL
+  URL.revokeObjectURL(url);
+});
+
+// Add event listener for the export images button
+document.getElementById('export-images-button').addEventListener('click', () => {
+  const images = [];
+
+  // Iterate over the frames of the animation
+  for (let i = 0; i < animation.length; i++) {
+    // Get the frame data
+    const frame = animation[i];
+
+    // Create a new image from the frame data
+    const image = new Image();
+    image.src = frame;
+
+    // Add the image to the array of images
+    images.push(image);
+  }
+
+  // Create a new zip file
+  const zip = new JSZip();
+
+  // Add the images to the zip file
+  for (let i = 0; i < images.length; i++) {
+    // Get the image data
+    const image = images[i];
+
+    // Add the image to the zip file
+    zip.file(`frame-${i}.png`, image.src, {base64: true});
+  }
+
+  // Download the zip file
+  zip.generateAsync({type: 'blob'}).then((blob) => {
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'animation.zip';
+    a.click();
+
+    URL.revokeObjectURL(url);
+  });
+});
+  </script>
   <div class="timeline-container">
   <input type="range" id="timeline" min="0" max="100" value="0">
 </div>
