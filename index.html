@@ -58,6 +58,29 @@
     <button><a href="https://blackoutgames.netlify.app/"</a>Netlify</button>
     <button><a href="https://dotlyhiyou-github-io.vercel.app/"</a>Vercel</button>
   </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
+  </script>
   
 </body>
   <script type="text/javascript" src="https://www.stat-counter.org/count/fabe"></script><br>
