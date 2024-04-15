@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Games</title>
+</head>
+<body>
+  
+
+<style>
+  .text:hover {
+    box-shadow:5px 10px 20px #ffffff;
+  }
+  .text {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius:10px;
+    font-family:sans;
+    text-decoration:none;
+  }
+  .sample {
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+  
+  }
+  .sample:hover {
+    box-shadow:5px 10px 20px #ffffff;
+  }
+</style>
+ <label for="background-select">Select Background:</label>
+  <select id="background-select">
+    <option value="default.jpg">Default</option>
+    <option value="https://i.pinimg.com/originals/da/5c/80/da5c80450b91ab4da958fabbdcf707a4.gif">Star themed</option>
+    <option value="https://i.pinimg.com/originals/c7/f7/b9/c7f7b91fcc8d3c520645b5e04872e023.gif">Sun set</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <!-- Include the JavaScript code -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
+  </script>
+
+
+
+
+
+
+
+ <style>
+   
+  img {
+    display: block;
+    margin: auto;
+    width: 35%; /* change this value to adjust the size of the image */
+  }
+</style>
+
+  <style>
+    body {
+      background-color:black;
+      font-family:sans
+    }
+  </style>
+
+
+
+
+<img src="https://i.ibb.co/YcT7bWR/blackout-removebg-preview.png" alt="Image">
+</body>
+
+</html>
