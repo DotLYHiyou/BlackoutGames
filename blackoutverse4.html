@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Games</title>
+</head>
+<body>
+  
+
+<style>
+  .text:hover {
+    box-shadow:5px 10px 20px #ffffff;
+  }
+  .text {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius:10px;
+    font-family:sans;
+    text-decoration:none;
+  }
+  .sample {
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+  
+  }
+  .sample:hover {
+    box-shadow:5px 10px 20px #ffffff;
+  }
+</style>
+<a class="text" href="pokefirered.html">Pokemon Fire Red</a>
+
+
+
+
+
+ <style>
+   
+  img {
+    display: block;
+    margin: auto;
+    width: 35%; /* change this value to adjust the size of the image */
+  }
+</style>
+
+  <style>
+    body {
+      background-color:black;
+      font-family:sans
+    }
+  </style>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
+  </script>
+
+
+
+
+<img src="https://i.ibb.co/YcT7bWR/blackout-removebg-preview.png" alt="Image">
+</body>
+
+</html>
