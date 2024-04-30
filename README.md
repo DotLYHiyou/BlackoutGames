@@ -1,10 +1,10 @@
 # Blackout
 An unblocked games website with easy to use interface and lots of things. Very customizable via the wallpaper-changer in the settings.
 # Soon
--Custom wallpapers
--Computer-like interface.
--Even more links that can go unnoticed.
--More games.(Blackout has basically no games.
+- Custom wallpapers
+- Computer-like interface.
+- Even more links that can go unnoticed.
+- More games.(Blackout has basically no games.
 
 # Links
 placed here by request from  [RellyJell](https://github.com/RellyJell),
