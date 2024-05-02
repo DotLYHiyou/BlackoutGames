@@ -27,10 +27,17 @@
   </style>
 </head>
 <body>
-  <button class="text" href="search.html">Blackout Search</button>   
-  <button class="text" href="force.html">NVIDIA GeForce NOW</button>
-
-
+  <button class="text" onclick="search()">Blackout Search</button>
+  <button class="text" onclick="force()">NVIDIA GeForce NOW</button>
+  <script>
+    function search() {
+    window.location.href = "search.html"
+    }
+    function f4orce() {
+    window.location.href = "force.html"
+    }
+  </script>
+  
     <script>
     document.addEventListener("DOMContentLoaded", function() {
   // Get the select element
