@@ -4,7 +4,7 @@ An unblocked games website with easy to use interface and lots of things. Very c
 - Custom wallpapers
 - Computer-like interface.
 - Even more links that can go unnoticed.
-- More games.(Blackout has basically no games.
+- More games.(Blackout has basically no games. XD)
 
 # Links
 placed here by request from  [RellyJell](https://github.com/RellyJell),
