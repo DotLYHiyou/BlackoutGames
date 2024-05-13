@@ -2,116 +2,82 @@
 <html>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Games</title>
+  <style>
+    .button {
+      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      border-radius: 10px;
+      transition: all .2s;
+      border: none;
+      font-family: Poppins;
+      font-weight: 500;
+      color: black;
+      background-color: white;
+      padding: 1em 2em;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: none;
+    }
+
+    .button:active {
+      transform: translateY(-1px);
+    }
+
+    .button::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #fff;
+    }
+
+    .button:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+
+    body {
+      background-color: black;
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 35%;
+    }
+  </style>
 </head>
 <body>
-  
+  <button class="button" onclick="window.location.href='drift.html'">Drift hunters</button>
+  <button class="button" onclick="window.location.href='ovo.html'">OvO</button>
+  <button class="button" onclick="window.location.href='hook.html'">Stickman hook</button>
+  <button class="button" onclick="window.location.href='granny.html'">Granny</button>
+  <button class="button" onclick="window.location.href='tunnel.html'">Tunnel rush</button>
+  <button class="button" onclick="window.location.href='subway.html'">Subway Surfers</button>
 
-<style>
-.button {
-    position: relative;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    transition: all .2s;
-    border: none;
-    font-family: Poppins;
-    font-weight: 425;
-    color: black;
-    background-color: white;
-    padding: 1em 2em;
-    margin: 5px;
-}
+  <img src="https://i.ibb.co/YcT7bWR/blackout-removebg-preview.png" alt="Image">
 
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: none; /* Removed the white shadow on hover */
-}
-
-.button:active {
-    transform: translateY(-1px);
-}
-
-.button::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.button::after {
-    background-color: #fff;
-}
-
-.button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-
-
-
-  .sample {
-    border-radius: 12px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-  
-  }
-  .sample:hover {
-    box-shadow:5px 10px 20px #ffffff;
-  }
-</style>
-<button class="button" onclick="window.location.href='drift.html'">Drift hunters</button>
-<button class="button" onclick="window.location.href='ovo.html'">OvO</button>
-<button class="button" onclick="window.location.href='hook.html'">Stickman hook</button>
-<button class="button" onclick="window.location.href='granny.html'">Granny</button>
-<button class="button" onclick="window.location.href='tunnel.html'">Tunnel rush</button>
-<button class="button" onclick="window.location.href='subway.html'">Subway Surfers</button>
-
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  // Get the select element
-  var select = document.getElementById("background-select");
-
-  // Set initial background image based on stored preference or default
-  var selectedBackground = localStorage.getItem("selectedBackground");
-  
-  if (selectedBackground) {
-    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
-    select.value = selectedBackground;
-  }
-
-   // Listen for changes in the select element
-   select.addEventListener("change", function() {
-     var newBackground = this.value;
-     document.body.style.backgroundImage = "url(" + newBackground + ")";
-     localStorage.setItem("selectedBackground", newBackground);
-   });
-});
-
-  </script>
-
-
-
-
-<img src="https://i.ibb.co/YcT7bWR/blackout-removebg-preview.png" alt="Image">
-</body>
   <button class="button" onclick="window.location.href='blackoutverse2.html'">Back</button>
   <button class="button" onclick="window.location.href='blackoutverse4.html'">Next</button>
-
-
+</body>
 </html>
