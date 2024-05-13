@@ -9,20 +9,56 @@
   
 
 <style>
-  .text:hover {
-    box-shadow:5px 10px 20px #ffffff;
-  }
-  .text {
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
+.button {
+    position: relative;
     font-size: 14px;
-    cursor: pointer;
-    border-radius:10px;
-    font-family:sans;
-    text-decoration:none;
-  }
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: Poppins;
+    font-weight: 425;
+    color: black;
+    background-color: white;
+    padding: 1em 2em;
+    margin: 5px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: none; /* Removed the white shadow on hover */
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.button::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+
   .sample {
     border-radius: 12px;
     background-color: white;
@@ -35,39 +71,6 @@
     box-shadow:5px 10px 20px #ffffff;
   }
 </style>
-<a class="text" href="drift.html">Drift hunters</a>
-<a class="text" href="ovo.html">OvO</a>
-<a class="text" href="hook.html">Stickman hook</a>
-<a class="text" href="granny.html">Granny</a>
-<a class="text" href="tunnel.html">Tunnel rush</a>
-<a class="text" href="subway.html">Subway Surfers</a>
-<a class="text" href="roof2.html">Rooftop Snipers 2</a>
-<a class="text" href="bitlife.html">Bitlife</a>
-<a class="text" href="edgesurf.html">Edge Surf</a>
-<a class="text" href="riddle1.html">Riddle School</a>
-<a class="text" href="riddle2.html">Riddle School 2</a>
-<a class="text" href="pokemerald.html">Pokemon Emerald</a>
-
-
-
-
-
-
- <style>
-   
-  img {
-    display: block;
-    margin: auto;
-    width: 35%; /* change this value to adjust the size of the image */
-  }
-</style>
-
-  <style>
-    body {
-      background-color:black;
-      font-family:sans
-    }
-  </style>
 
 
     <script>
