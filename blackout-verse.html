@@ -12,22 +12,24 @@
   
 
 <style>
-  .text:hover {
-   box-shadow: 0px 0px 20px -18px;
-    transform: scale(0.95);
-
-  }
-  .text {
+.text {
     background-color: white;
     color: black;
     border: none;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-    border-radius:10px;
-    font-family:Poppins;
-    text-decoration:none;
-  }
+    border-radius: 10px;
+    font-family: Poppins;
+    text-decoration: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.text:hover {
+    box-shadow: 0px 0px 20px -18px;
+    transform: scale(0.95);
+}
+
   .sample {
     border-radius: 12px;
     background-color: white;
