@@ -2,7 +2,7 @@
 An unblocked games website with easy to use interface and lots of things. Customizable via the Themes Section.
 
 # Soon
-- Custom wallpapers in the settings.
+- Custom themes.
 - More games.
 
 # Links
