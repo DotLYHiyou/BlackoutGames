@@ -1,6 +1,7 @@
 # Blackout
 An unblocked games website with easy to use interface and lots of things. Customizable via the Themes Section.
 If you consider forking, or just want to get the latest news, Join the Discord! (https://discord.gg/myycsQV4)
+A version two is on the way 👀
 # Soon
 - Custom themes.
 - More games.
