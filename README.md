@@ -1,6 +1,6 @@
 # Blackout
 An easily-deployable unblocked games website with easy to use interface and lots of things. Customizable via the Themes Section.
-If you consider forking, or just want to get the latest news, Join the Discord! (https://discord.gg/myycsQV4)
+If you consider forking, or just want to get the latest news, Join the discord (link has expired pls wait for new one)
 # Soon
 - More links for Blackout.
 # Notice
