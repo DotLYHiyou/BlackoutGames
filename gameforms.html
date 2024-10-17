@@ -1,12 +1,72 @@
-<form name="contact" PGG blackout games>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4081;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1c7a;
+        }
+    </style>
+</head>
+<body>
+
+<form name="contact" action="your_action_url" method="POST">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+    </p>
 
     <p>
-    <label>Email <input type="Game" name="Game name" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
+        <label for="gameName">Game Name:</label>
+        <input type="text" name="gameName" id="gameName" required />
+    </p>
+
+    <p>
+        <button type="submit">Send</button>
+    </p>
 </form>
+
+</body>
+</html>
+
