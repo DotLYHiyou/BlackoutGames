@@ -195,19 +195,22 @@
 <body>
   <button class="button" onclick="search()">Blackout Search</button>
   <button class="button" onclick="force()">ADMIN</button>
-  <button class="button" onclick="dollar()">Registration</button>
-  <button class="button" onclick="vscode()">login</button>
+  <button class="button" onclick="reg()">Registration</button>
+  <button class="button" onclick="login()">login</button>
+   <button class="button" onclick="logout()">logout</button>
   <script>
     function search() {
     window.location.href = "search.html"
     }
-    function force() {
+    function admin() {
     window.location.href = "https://authpro.com/login/RobertD"
     }
-    function dollar() {
+    function reg() {
     window.location.href = "https://www.authpro.com/auth/RobertD/?action=reg"
     }    
-    function vscode() {
+    function logout() {
+    window.location.href = "https://www.authpro.com/auth/RobertD/?action=logout"
+      function login() {
     window.location.href = "https://www.authpro.com/auth/RobertD/"
     }
   </script>
