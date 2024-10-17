@@ -5,5 +5,5 @@
 
 <head>
 
-<iframe src="https://retro-bowl-six.vercel.app/" width="100%" height="100%" </iframe>
+<iframe width="100%" height="100%" src="https://retro-bowl-six.vercel.app/"  </iframe>
 </html>
