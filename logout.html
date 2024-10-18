@@ -27,25 +27,14 @@
 </head>
 <body>
 
-  <span id="ap_welcome"></span>
+<span id="ap_welcome"></span>
+<script type="text/javascript">
+  var ap_welcome="Hello, you're logged in as: " + login;
+  ap_welcome+=" [<a href='https://www.authpro.com/auth/RobertD/?action=logout'>Logout</a>]";
+  if (exp_days!='') { ap_welcome+=" (your account will be expired in " + exp_days + " days)"; }
+  document.getElementById("ap_welcome").innerHTML = ap_welcome;
+</script>
 
-  <script type="text/javascript">
-    // Assuming 'login' and 'exp_days' are defined variables
-    const login = "RobertD";  // Example, replace with actual dynamic value
-    const exp_days = 10;      // Example, replace with actual dynamic value
-
-    // Construct the welcome message
-    let ap_welcome = `Hello, you're logged in as: ${login}`;
-    ap_welcome += ` [<a href='https://www.authpro.com/auth/RobertD/?action=logout'>Logout</a>]`;
-
-    // Add expiration message if applicable
-    if (exp_days !== '') {
-      ap_welcome += ` (your account will expire in ${exp_days} days)`;
-    }
-
-    // Insert the message into the DOM
-    document.getElementById("ap_welcome").innerHTML = ap_welcome;
-  </script>
 
 </body>
 </html>
