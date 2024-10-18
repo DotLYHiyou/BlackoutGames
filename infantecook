@@ -1,0 +1,2951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<!--
+⢠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄⣀⣀⠄⠄⠄⠄⠄⠄⠄⠄⣀⣀⣀⣀⣀⣀⣀⡀
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣆⡀⠄⠄⠄⠄⠿⠿⠿⠿⢿⣿⣿⠇
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄⠄⠄⣠⣿⡿⠁⠄
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠈⠹⣿⣿⣿⣿⣧⠄⠄⠄⠄⠄⣰⣿⡿⠁⠄⠄
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⠄⠄⠄⠄⢀⣿⣿⠇⠄⠄⠄
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⢀⣿⣿⣿⣿⡟⠄⠄⠄⠄⠘⠛⠛⢀⣀⣀⠄
+⢸⣿⣿⣿⣿⣤⣤⣤⣤⣤⣤⣤⣶⣾⣿⣿⣿⡿⠄⠄⠄⠄⠄⠄⢀⣴⣿⣿⣿⠄
+⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠄⠄⠄⠄⠄⠄⣠⣿⠟⢹⣿⣿⠄
+⢸⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⣿⣯⣍⠁⠄⠄⠄⠄⠄⠄⢀⣾⣿⣉⣀⣸⣿⣿⣀
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠙⢿⣿⣿⣿⣷⣄⠄⠄⠄⠄⠄⠸⠿⠿⠿⠿⢿⣿⣿⠿
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠈⣿⣿⣿⣿⣿⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⠿⠿⠄
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠈⢿⣿⣿⣿⣿⣇⠄⠄⠄⠄⣿⣿⣧⣾⣿⣿⣷⡀
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠈⢻⣿⣿⣿⣿⣦⠄⠄⠄⣿⣿⡏⠄⢸⣿⣿⡇
+⢸⣿⣿⣿⣿⠄⠄⠄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣆⠄⠄⣿⣿⡇⠄⢸⣿⣿⡇
+⠘⠛⠛⠛⠛⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠛⠛⠛⠛⠛⠃⠄⠛⠛⠃⠄⠘⠛⠛⠃
+This HTML and its contents are property of R74n.com.
+-->
+    <meta name="description" content="Cooking simulator playable in your browser with hundreds of ingredients and a smart dish name generator.">
+    <meta name="keywords" content="R74n, R47n">
+    <meta name="author" content="R74n">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:image:alt" content="Infinite Chef">
+    <meta name="twitter:image" content="https://R74n.com/cook/icons/icon.png">
+    <title>Infinite Chef - R74n</title>
+    <script type="application/ld+json">{"@context" : "http://schema.org","@type" : "Organization","name" : "R74n","url" : "https://r74n.com","sameAs" : ["https://twitter.com/R74nCom","https://twitter.com/CopyPasteDump","https://www.youtube.com/channel/UCzS6ufDfiDxbHVL001GwFeA"], "logo":"https://r74n.com/icons/favicon.png", "email":"contact@r74n.com"}</script>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="https://R74n.com/icons/safari-pinned-tab.svg?v=R74n-2" color="#1cd2d2">
+    <link rel="shortcut icon" href="icons/favicon-32x32.png">
+    <meta name="msapplication-config" content="https://R74n.com/icons/browserconfig.xml?v=R74n-2">
+    <link rel="canonical" href="https://r74n.com/cook/">
+
+    <script src="https://R74n.com/load.js"></script>
+
+    <script src="foodData.js"></script>
+
+    <script>
+      // Load Settings
+      settings = JSON.parse(localStorage.getItem('settings')) || {};
+    </script>
+
+    <style>
+      .content {
+        margin: 0;
+      }
+      #textualContent {
+        margin: 10px;
+        margin-top: 20px;
+      }
+      @font-face {
+        font-family: 'VT323';
+        src: url('fonts/VT323-Regular.ttf') format('truetype');
+      }
+      #textualContent, .pagetitle {
+        font-family: 'VT323';
+      }
+      #gameDiv {
+        font-family: 'VT323';
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        border: solid 3px #614202;
+        box-sizing: border-box;
+        background-color: #614202;
+        text-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+        position: relative;
+        cursor: url("cursor_full.png"), auto;
+      }
+      #gameDiv button img {
+        pointer-events: none;
+      }
+      #gameDiv button, #gameDiv a {
+        cursor: url("cursor_full.png"), auto;
+      }
+      #gameDiv input[type="text"] {
+        cursor: url("cursor_text.png"), auto;
+      }
+      #gameCanvasDiv {
+        position: relative;
+      }
+      #gameCanvas {
+        background-color: #e3d5ba;
+        width: 100%;
+        /* background image background.png, tiled, pixel art */
+        background-image: url('background.png');
+        background-size: 200px 200px;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        user-select: none;
+        touch-action: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+      }
+      #gameCanvas img {
+        -webkit-user-select:none;
+        -webkit-touch-callout:none;
+      }
+      #loadingScreen {
+        background-color: #e3d5ba;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+      }
+      #mainDiv {
+        flex-direction: column;
+      }
+      #rightDiv {
+        display: flex;
+        flex-direction: column;
+        background-color: #edebe6;
+        height: 100%;
+        border-left: solid gray 3px;
+      }
+      #controlsBar {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        flex-grow: 1;
+        box-shadow: -3px 0px 4px rgba(0,0,0,0.25);
+        height: 100%;
+      }
+      #controlsBar, #prepControls {
+        z-index: 7;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+      #controlsBar button {
+        flex-grow: 1;
+        border-bottom: 3px solid gray;
+      }
+      #controlsBar button, #prepControls button {
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+        background-color: #edebe6;
+        color: black;
+        box-sizing: border-box;
+        max-height: unset;
+        position: relative;
+      }
+      #controlsBar button img {
+        /* shadow */
+        filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.25));
+        width: 2.5em;
+        max-width: unset;
+      }
+      #controlsBar button[selected] {
+        background-color: #fff782;
+        color: white;
+      }
+      /* last button no border */
+      #controlsBar button:last-child {
+        border-bottom: none;
+      }
+      #prepBar, .dialogBox input, .dialogBox button {
+        background-color: #9b6723;
+        padding: 7.5px;
+        border-bottom: solid 3px #614202;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+        z-index: 5;
+        position: relative;
+        caret-color: #fffab7;
+        /* background-image: url('wood.png');
+        background-size: 100px 100px; */
+      }
+      #prepBar ::placeholder {
+        color: #614202;
+        text-shadow: none;
+        opacity: 1; /* Firefox */
+      }
+      #prepBar ::-ms-input-placeholder { /* Edge 12 -18 */
+        color: #614202;
+        text-shadow: none;
+      }
+      ::selection {
+        background: #fffab7; /* WebKit/Blink Browsers */
+      }
+      ::-moz-selection {
+        background: #fffab7; /* Gecko Browsers */
+      }
+      #prepText {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: #edebe6;
+        text-align: left;
+        border-radius: 0;
+        font-size: 30px;
+        text-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+      }
+      #searchResultsDiv {
+        color: #edebe6;
+        position: absolute;
+        display: none;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+        background-color: #9b6723;
+        border-bottom: solid 3px #614202;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+        max-height: 10em;
+        overflow-y: scroll;
+        z-index: 6;
+      }
+      /* inside #searchResults, have up to 5 searchResult divs side by side */
+      #searchResults {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      .searchResult {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5px;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+        border: solid 1px #775104;
+        cursor: url("cursor_full.png"), auto;
+        background-color: #9b6723;
+        flex-grow: 1;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+      .searchResult:hover {
+        background-color: #b78219;
+      }
+      .searchResult:active {
+        background-color: #705019;
+      }
+      .searchResult img {
+        width: 2em;
+        height: 2em;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        -webkit-filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+        user-drag: none;
+        -webkit-user-drag: none;
+      }
+      .searchResult span {
+        font-size: 22px;
+      }
+
+      #prepControls {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
+        border-bottom: solid 3px #614202;
+        border-right: solid 3px #614202;
+        white-space: nowrap;
+        overflow: scroll;
+        max-width: 100%;
+        scrollbar-width: none;
+      }
+      #prepControls::-webkit-scrollbar { display: none; }
+      #prepControls button {
+        padding: 5px;
+        background-color: #9b6723;
+        border-left: solid 3px #614202;
+      }
+      #prepControls button:first-child {
+        border-left: unset;
+      }
+      #prepControls button[on="true"] {
+        background-color: #754e1b;
+      }
+      #prepControls button[on="true"]:hover {
+        filter: brightness(0.75)
+      }
+      #prepControls button img {
+        width: 1.8em;
+        max-width: unset;
+      }
+      #statBar {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 5;
+      }
+
+      .dialogBox {
+        display: none;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #9b6723;
+        padding: 10px;
+        padding-top: 25px;
+        border: solid 3px #614202;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.75);
+        z-index: 9;
+        min-height: 85%;
+        width: 75%;
+        font-size: 1.4em;
+        vertical-align: top;
+      }
+      .dialogBox p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .dialogScroll {
+        overflow-y: scroll;
+        max-height: 80%;
+      }
+      .dialogBox:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 55px 55px 0;
+        border-color: transparent #614202 transparent transparent;
+        right: -2px;
+        top: -2px;
+        position: absolute;
+      }
+      .dialogX {
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 48px;
+        height: 48px;
+        z-index: 100;
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+      }
+      .dialogX:hover {
+        filter: brightness(1.25);
+      }
+      .dialogBox input[type="text"], .dialogBox button {
+        background-color: #693b00;
+        border-bottom: solid 3px #502d00;
+        border-radius: 0;
+        font-size: 1em;
+        vertical-align: middle;
+        line-height: 0.6;
+      }
+      .dialogBox p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      #dishImage {
+        height: 225px;
+        display: block;
+        margin: auto;
+        z-index: 25;
+        transform: rotate(-3deg);
+        border: #edebe6 dashed 3px;
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+      }
+      #dishNameDiv {
+        background-color: #f9ecd8;
+        width:85%;
+        min-height: 1.5em;
+        min-width:80%;
+        text-align: center;
+        z-index: 30;
+        margin: auto;
+        display:table;
+        color: #434343;
+        text-shadow: none;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        transform: rotate(3deg) translate(0, -15px);
+      }
+      #dishName {
+        /*vertically align text*/
+        display:table-cell;
+        vertical-align:middle;
+      }
+      #serveUnder {
+        text-align: left;
+        margin-left: 10px;
+      }
+      #shareBlurb {
+        padding-bottom: 10px;
+        display: inline-block;
+        color: #edebe6;
+      }
+      #shareIconDiv {
+        vertical-align: middle;
+      }
+      #shareIconDiv img {
+        margin-right: 3px;
+        height: 1.7em;
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+        vertical-align: middle;
+      }
+      #shareIconDiv img:hover, #serveClearButton:hover {
+        filter: brightness(1.25);
+      }
+      #serveClearButton {
+        float:right;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #9b6723;
+        color: #edebe6;
+        font-size: 1em;
+        vertical-align: middle;
+        height: auto;
+        /* center text */
+        max-height: unset;
+        padding: 10px;
+        box-shadow:unset;
+        border-radius: 0;
+        border: outset 3px #c48405;
+        filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.4));
+      }
+      #gameDiv a {
+        color: #fffab7;
+      }
+      #gameDiv hr {
+        border: 1px dashed #614202;
+      }
+      
+      /*
+      <div id="boxContainer">
+        <div class="box">Testing</div>
+      </div>
+      */
+      #dishNameDiv {
+        --mask: 
+    conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) left/51% 20px repeat-y,
+    conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) right/51% 20px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+          /* adjust: https://css-generators.com/custom-borders/ */
+      }
+      #boxContainer {
+        background: linear-gradient(90deg,#ddd,#fff);
+      }
+
+
+      /* mobile */
+      @media (max-width: 700px) {
+        #gameDiv {
+          width: 100%;
+          height: 100%;
+        }
+        #serveClearButton {
+          display: none
+        }
+        .dialogBox p {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+      @media (max-width: 450px) {
+        .dialogBox {
+          width: 91vw;
+          left:0px;
+          transform:unset;
+        }
+      }
+      /* desktop */
+      @media (min-width: 700px) {
+      }
+    </style>
+
+</head>
+<body>
+
+
+<a href="https://R74n.com" class="backbutton">⦉</a>
+<h1 class="pagetitle">Infinite Chef</h1>
+<div class="content">
+
+
+<div id="gameDiv">
+  <div id="mainDiv" style="display: none;">
+    <div id="prepBar">
+      <input type="text" id="prepText" placeholder="Search ingredients..." autocomplete="off">
+    </div>
+    <div id="gameCanvasDiv">
+      <canvas id="gameCanvas"></canvas>
+      <div id="searchResultsDiv">
+        <div id="searchResults" oncontextmenu="return false;";></div>
+      </div>
+      <div id="prepControls" oncontextmenu="return false;";><!--
+        --><button id="button-settings" onclick="showSettings();" title="Settings and Mods"><img src="gear.png" class="pixelart"></button><!--
+        --><button id="button-tempIncrease" onclick="toggle('tempIncrease')" title="Heat"><img src="temp_increase.png" class="pixelart"></button><!--
+        --><button id="button-tempDecrease" onclick="toggle('tempDecrease')" title="Cool"><img src="temp_decrease.png" class="pixelart"></button><!--
+      --></div>
+      <div id="statBar"></div>
+      <div id="dialogBox" class="dialogBox">
+        <img src="dialog_x.png" class="pixelart dialogX" onclick="hideDialog()">
+        <div id="dialogContent">
+          Text
+        </div>
+      </div>
+      <div id="serveBox" class="dialogBox">
+        <img src="dialog_x.png" class="pixelart dialogX" onclick="hideDialog()">
+        <div id="serveContent">
+          <img id="dishImage" src="background.png">
+          <div id="dishNameDiv"><span id="dishName" ondblclick="this.contentEditable='true';this.focus();event.preventDefault();return false;" onblur="this.contentEditable='false';">Ketchup Mac and Cheese</span></div>
+          <div id="serveUnder">
+            <span id="shareBlurb">Share with the world. Screenshot!</span>
+            <div id="shareIconDiv">
+              <a href="https://twitter.com/" title="Share to Twitter / X" id="shareTwitter" target="_blank"><img src="../shapes/png/share-buttons/twitter.png" class="pixelart"></a><a href="https://reddit.com/" title="Share to Reddit" id="shareReddit" target="_blank"><img src="../shapes/png/share-buttons/reddit.png" class="pixelart"></a><a href="mailto:contact@R74n.com?subject=%5BInfiniteChef%5D" title="Send via Email" id="shareEmail" target="_blank"><img src="../shapes/png/share-buttons/email.png" class="pixelart"></a><a href="#" id="shareClipboard" title="Copy to Clipboard" target="_blank"><img src="../shapes/png/share-buttons/clipboard-copy.png" class="pixelart"></a>
+              <button onclick="clearView()" id="serveClearButton">Start Over</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="settingsBox" class="dialogBox dialogScroll">
+        <img src="dialog_x.png" class="pixelart dialogX" onclick="hideDialog()">
+        <div id="dialogContent">
+          <p>Settings</p>
+          <p>
+            Temperature shows in <button setting="units" onclick="cycleButton(this)" values="metric,imperial" value="metric">metric</button>.
+          </p>
+          <script>
+            var buttons = document.querySelectorAll("button[setting]");
+            buttons.forEach(function(e) {
+              if (settings[e.getAttribute("setting")]) {
+                e.setAttribute("value", settings[e.getAttribute("setting")]);
+                e.innerHTML = settings[e.getAttribute("setting")]
+              };
+            });
+          </script>
+          <hr>
+          <p>Mods (<a href="https://github.com/R74nCom/InfiniteChef-Mods" target="_blank">List</a>)</p>
+          <input type="text" id="addModText" placeholder="Add Mod (.js)"> <img src="../shapes/png/plus_thick.png" onclick="addMod(document.getElementById('addModText').value)">
+          <p id="modList"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rightDiv" style="display: none;">
+    <div id="controlsBar" oncontextmenu="return false;";>
+      <button selected id="button-bowl" onclick="changeView('bowl')" title="Bowl Mode"><img src="../shapes/png/semicircle_bottom.png" class="pixelart" alt="bowl"></button>
+      <button id="button-stack" onclick="changeView('stack')" title="Stack Mode"><img src="../shapes/png/stack.png" class="pixelart" alt="stack"></button>
+      <button id="button-clear" onclick="clearView()" title="Start Over"><img src="../shapes/png/x.png" class="pixelart" alt="x"></button>
+      <button id="button-done" onclick="serveDish()" title="Serve Dish"><img src="green_check.png" class="pixelart" alt="check"></button>
+    </div>
+  </div>
+  <div id="loadingScreen">
+    Preparing Kitchen...
+  </div>
+</div>
+
+<script>
+  function saveSettings() {
+    localStorage.setItem('settings', JSON.stringify(settings));
+  }
+  function setSetting(setting, value) {
+    settings[setting] = value;
+    saveSettings();
+  }
+  function cycleButton(e) {
+    var values = e.getAttribute('values').split(',');
+    var value = e.getAttribute('value');
+    var index = values.indexOf(value);
+    index = (index + 1) % values.length;
+    e.setAttribute('value', values[index]);
+    e.innerHTML = values[index];
+    var setting = e.getAttribute('setting');
+    if (setting) {
+      setSetting(setting, values[index]);
+    }
+    return values[index];
+  }
+
+  function refreshCanvas() {
+    canvas.width = gameDiv.clientWidth - document.getElementById('controlsBar').clientWidth;
+    canvas.height = gameDiv.clientHeight - document.getElementById('prepBar').clientHeight - 2;
+    ctx.webkitImageSmoothingEnabled = false;
+    ctx.mozImageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = false;
+    drawCanvas();
+  }
+  canvas = document.getElementById('gameCanvas');
+  var gameDiv = document.getElementById('gameDiv');
+  var mainDiv = document.getElementById('mainDiv');
+  var rightDiv = document.getElementById('rightDiv');
+  var ctx = canvas.getContext('2d');
+  canvas.width = Math.min(700, window.innerWidth);
+  canvas.height = 500;
+  // set to pixelated rendering
+  ctx.webkitImageSmoothingEnabled = false;
+  ctx.mozImageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = false;
+  gameDiv.style.height = canvas.height + 'px';
+  gameDiv.style.width = canvas.width + 'px';
+  mainDiv.style.height = canvas.height + 'px';
+  mainDiv.style.width = canvas.width + 'px';
+  if (window.innerWidth < 700) {
+    // mobile scripts
+  }
+  else {
+    // desktop scripts
+  }
+  fps = 40;
+  gameLoop = null;
+  ticks = 0;
+  function useTool() {
+    if (toolData[currentTool].func) {
+      var placed = ingredientsAt(mousePos.x, mousePos.y);
+      if (placed.length) {
+        if (toolData[currentTool].target === "many") {
+          toolData[currentTool].func(placed);
+        }
+        else {
+          placed.forEach(toolData[currentTool].func);
+        }
+      }
+    }
+    if (toolData[currentTool].spin) currentToolR = (currentToolR+18) % 360;
+    // sine
+    else if (toolData[currentTool].sway) currentToolR = Math.sin(ticks/5)*15;
+  }
+  function tick() {
+    if (currentTool) {
+      if (toolData[currentTool].func && controlState.mouse === 0) {
+        useTool();
+      }
+      if (toolData[currentTool].whileOn) {
+        toolData[currentTool].whileOn();
+      }
+    }
+
+    if (!leftBound) {
+      if (viewInfo[currentView] !== undefined && viewInfo[currentView].hitbox) {
+        var bowlImg = loadImage(viewInfo[currentView].image);
+        leftBound = Math.round(canvas.width/2 - bowlImg.width/2*5) + 50;
+        rightBound = Math.round(canvas.width/2 + bowlImg.width/2*5) - 50;
+        hitLine = Math.round(bowlImg.height*3 + canvas.height/2 - bowlImg.height/2*5+80);
+      }
+    }
+    drawCanvas();
+    tickPlaced();
+    updateStats();
+    ticks++;
+  }
+  imageCache = {};
+  searchTimeout = null;
+  currentIngredient = "";
+  currentIngredientProps = {};
+  currentTool = null;
+  currentToolR = 0;
+  currentView = "bowl";
+  viewData = {};
+  controlState = {};
+  mousePos = {x: 0, y: 0, speedX:0, speedY:0};
+  foodScale = 2.25;
+  function loadImage(src) {
+    if (imageCache[src] == undefined) {
+      imageCache[src] = new Image();
+      imageCache[src].loaded = false;
+      imageCache[src].onload = function() {
+        this.loaded = true;
+      }
+      // set to unknown.png on error
+      imageCache[src].onerror = function() {
+        this.src = "../shapes/png/unknown.png";
+      }
+      imageCache[src].src = src;
+    }
+    return imageCache[src];
+  }
+  function drawImageSized(src, top_left, bottom_right) {
+    var img = loadImage(src);
+    // draw image based on percentage of canvas
+    ctx.drawImage(img, top_left[0] * canvas.width, top_left[1] * canvas.height, (bottom_right[0] - top_left[0]) * canvas.width, (bottom_right[1] - top_left[1]) * canvas.height);
+  }
+  function rgbToHsl(r, g, b) {
+    r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+    if (max == min) {
+      h = s = 0; // achromatic
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return [h, s, l];
+  }
+  function hexToHsl(hex) {
+    var r = parseInt(hex.substring(1, 3), 16);
+    var g = parseInt(hex.substring(3, 5), 16);
+    var b = parseInt(hex.substring(5, 7), 16);
+    return rgbToHsl(r, g, b);
+  }
+  function hslToRgb(h, s, l) {
+    var r, g, b;
+    if (s == 0) {
+      r = g = b = l; // achromatic
+    } else {
+      var hue2rgb = function hue2rgb(p, q, t) {
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1 / 6) return p + (q - p) * 6 * t;
+        if (t < 1 / 2) return q;
+        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+        return p;
+      }
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1 / 3);
+    }
+    return [r * 255, g * 255, b * 255];
+  }
+  function mixHsl(hsl1, hsl2, ratio) {
+    var h = hsl1[0] + (hsl2[0] - hsl1[0]) * ratio;
+    var s = hsl1[1] + (hsl2[1] - hsl1[1]) * ratio;
+    var l = hsl1[2] + (hsl2[2] - hsl1[2]) * ratio;
+    return [h, s, l];
+  }
+  function colorizeImage(src,h,s,l) {
+    var name = src+h+","+s+","+l;
+    if (imageCache[name]) { return imageCache[name]; }
+    var img = loadImage(src);
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    if (!img.loaded) {
+      if (!img.loadpilled) {
+        img.addEventListener('load', function() {
+          colorizeImage(src,h,s,l).src;
+          this.loaded = true;
+        });
+        img.loadpilled = true;
+      }
+      img.id = name;
+      return img;
+    }
+    var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < imgData.data.length; i += 4) {
+      var rgb = [imgData.data[i], imgData.data[i+1], imgData.data[i+2]];
+      var hsl = rgbToHsl(rgb[0], rgb[1], rgb[2]);
+      hsl[0] = hsl[0] + h;
+      hsl[1] = Math.min(1, Math.max(0, hsl[1] + s));
+      if (hsl[2] > 0.2 || l < hsl[2]) {
+        hsl[2] = Math.min(1, Math.max(0, hsl[2] + l));
+      }
+      if (hsl[1] > 0.9) {
+        hsl[1] -= Math.max(0, 0.14);
+      }
+      rgb = hslToRgb(hsl[0], hsl[1], hsl[2]);
+      imgData.data[i] = rgb[0];
+      imgData.data[i+1] = rgb[1];
+      imgData.data[i+2] = rgb[2];
+    }
+    ctx.putImageData(imgData, 0, 0);
+    imageCache[name] = new Image();
+    imageCache[name].src = canvas.toDataURL();
+    imageCache[name].id = name;
+    imageCache[name].addEventListener('load', function() {
+      this.loaded = true;
+    });
+    imageCache[name].loadpilled = true;
+    imageCache[name].loaded = false;
+    return imageCache[name];
+  }
+  function colorizeStandard(src,h,s,l) {
+    if (Array.isArray(h)) {
+      h = h[0];
+      s = s[0];
+      l = l[0];
+    }
+    h = Math.round(h);
+    s = Math.round(s);
+    l = Math.round(l);
+    return colorizeImage(src, (h/360), (s/100-0.87), (l/100-0.56))
+  }
+  var imgPath = "https://r74n.com/cook/";
+  function drawCanvas(calledback,hideGUI) {
+    // if (calledback && lastCallbackImage.skipCallback) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (viewRenderer[currentView] !== undefined) { viewRenderer[currentView](hideGUI) }
+    // draw a blue rectangle at the bottom of the bowl for its hitbox
+    // if (viewInfo[currentView] !== undefined && viewInfo[currentView].hitbox) {
+    //   var bowlImg = loadImage(viewInfo[currentView].image);
+    //   var hitbox = viewInfo[currentView].hitbox;
+    //   ctx.fillStyle = "rgba(0,0,255,0.5)";
+    //   // relative to bowlImg width and height and its position on canvas, topleft = 0, topright = 1, bottomright = 2, bottomleft = 3, height = 4
+    //   ctx.fillRect(bowlImg.width*hitbox[0] + canvas.width/2 - bowlImg.width/2*5, bowlImg.height*hitbox[1] + canvas.height/2 - bowlImg.height/2*5+75, bowlImg.width*hitbox[2], bowlImg.height*hitbox[4]);
+    // }
+  }
+  lastCallback = null;
+  function drawPlaced() {
+    // loop through viewData[currentView].total and draw each at their x and y
+    for (var i = 0; i < viewData[currentView].total.length; i++) {
+      var placed = viewData[currentView].total[i];
+      if (placed.hide) continue;
+      var shape = placed.shape || ingredients[placed.id].shape;
+      var ingredientImg = colorizeStandard("../shapes/png/"+shape+".png", placed.h??ingredients[placed.id].h, placed.s??ingredients[placed.id].s, placed.l??ingredients[placed.id].l);
+      if (ingredientImg.loaded === false) {
+        if (lastCallback) {
+          lastCallback.skipCallback = true;
+        }
+        var thisCallback = {img:ingredientImg};
+        ingredientImg.addEventListener('load', function() {
+          if (thisCallback.skipCallback) return;
+          drawCanvas(true);
+          this.onload = null;
+        });
+        lastCallback = thisCallback;
+        ingredientImg = imageCache[placed.lastImg];
+        if (!ingredientImg) continue;
+      }
+      placed.lastImg = ingredientImg.id;
+      if (placed.a < 1) {
+        ctx.globalAlpha = placed.a;
+      }
+      var scale = foodScale*(ingredientAttr(placed.id, "scale")||1);
+      var glow = ingredientAttr(placed.id, "glow");
+      var angleInRadians = (placed.r) * Math.PI / 180;
+      // ctx.drawImage(ingredientImg, placed.x - ingredientImg.width/2*scale, placed.y - ingredientImg.height/2*scale, ingredientImg.width*scale, ingredientImg.height*scale);
+
+      ctx.translate(placed.x, placed.y);
+      if (angleInRadians !== 0) ctx.rotate(angleInRadians);
+      if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 10; ctx.shadowOffsetY = 0; }
+      ctx.drawImage(ingredientImg, -ingredientImg.width/2*scale, -ingredientImg.height/2*scale, ingredientImg.width*scale, ingredientImg.height*scale);
+      if (glow) { ctx.shadowColor = "transparent"; }
+      if (angleInRadians !== 0) ctx.rotate(-angleInRadians);
+      ctx.translate(-placed.x, -placed.y);
+
+      if (placed.a < 1) {
+        ctx.globalAlpha = 1
+      }
+    }
+  }
+  function drawCursor() {
+    var offsetX = 0;
+    var offsetY = 0;
+    if ((currentIngredient||currentTool) && (!controlState.mobile || (currentTool && controlState.mouse === 0))) {
+      if (currentTool && toolData[currentTool].func) {
+        ctx.globalAlpha = 1;
+        if (toolData[currentTool].h) var ingredientImg = colorizeStandard(toolData[currentTool].img, toolData[currentTool].h, toolData[currentTool].s, toolData[currentTool].l);
+        else var ingredientImg = loadImage(toolData[currentTool].img);
+        var scale = foodScale;
+        offsetX = ingredientImg.width*(toolData[currentTool].offsetX||0);
+        offsetY = ingredientImg.height*(toolData[currentTool].offsetY||0);
+      }
+      else if (currentIngredient) {
+        ctx.globalAlpha = 0.5;
+        var ingredientId = currentIngredientProps.id||currentIngredient;
+        var ingredientImg = colorizeStandard("../shapes/png/"+(chooseShape(ingredientId, true) || ingredients[ingredientId].shape)+".png", ingredients[ingredientId].h, ingredients[ingredientId].s, ingredients[ingredientId].l);
+        var scale = foodScale*(ingredientAttr(ingredientId, "scale")||1);
+      }
+      else return;
+      var angleInRadians = ( (currentToolR||0) + (currentIngredientProps.r||0) ) * Math.PI / 180;
+      ctx.translate(mousePos.x, mousePos.y);
+      if (angleInRadians !== 0) ctx.rotate(angleInRadians);
+      ctx.drawImage(ingredientImg, -ingredientImg.width/2*scale+offsetX, -ingredientImg.height/2*scale+offsetY, ingredientImg.width*scale, ingredientImg.height*scale);
+      if (angleInRadians !== 0) ctx.rotate(-angleInRadians);
+      ctx.translate(-mousePos.x, -mousePos.y);
+      ctx.globalAlpha = 1;
+    }
+  }
+  function colorIngredient(ingredient, h, s, l) {
+    var info = ingredients[ingredient.id];
+    if (h === undefined) {
+      h = info.h;
+      s = info.s;
+      l = info.l;
+    }
+    if (Array.isArray(h)) { // select random color
+      var index = Math.floor(Math.random()*h.length);
+      h = h[index]; s = s[index]; l = l[index];
+    }
+    ingredient.h = h;
+    ingredient.s = s;
+    ingredient.l = l;
+  }
+  function changeIngredient(ingredient, newIngredient, skipContain) {
+    // if (!ingredients[newIngredient]) { return; }
+    newIngredient = choose(newIngredient);
+    if (newIngredient === null) {
+      deleteIngredient(ingredient);
+      return;
+    }
+    if (ingredient.id === newIngredient) { return; }
+    var wasLiquid = ingredientAttr(ingredient.id,"behavior") === 1;
+    if (wasLiquid && ingredient.done2) {
+      removeLiquid(ingredient.h, ingredient.s, ingredient.l);
+    }
+    if (!ingredient.original) ingredient.original = [];
+    else if (ingredient.original.indexOf(newIngredient) !== -1) {
+      // remove
+      ingredient.original.splice(ingredient.original.indexOf(newIngredient), 1);
+    }
+    if (ingredient.original.indexOf(ingredient.id) === -1) { ingredient.original.push(ingredient.id); }
+    ingredient.id = newIngredient;
+    colorIngredient(ingredient);
+    ingredient.a = ingredientAttr(ingredient.id,"a") || 1;
+    var newBehavior = ingredientAttr(ingredient.id,"behavior");
+    if (newBehavior === 3) { ingredient.done = false; ingredient.done2 = false; ingredient.hide = false; }
+    else if (wasLiquid || (ingredient.done2 && newBehavior === 1 && !ingredient.original)) {
+      addLiquid(ingredient.h, ingredient.s, ingredient.l);
+    }
+    if (wasLiquid && newBehavior !== 1 && newBehavior !== 2) {
+      viewData[currentView].liquidSolid = true;
+    }
+    if (!skipContain && newBehavior !== 3 && !ingredient.done2) containIngredient(ingredient);
+    if (!wasLiquid || newBehavior === 3) {
+      if (newBehavior === 3) {
+        ingredient.shape = chooseShape(ingredient.id);
+      }
+      else ingredient.shape = chooseShape(ingredient.id) || ingredient.shape;
+    }
+    updateSize(ingredient);
+    if (ingredient.done || ingredient.done2) ingredient.shape = ingredientAttr(ingredient.id, "landedShape") || ingredient.shape;
+    uncontainAll();
+  }
+  function chooseShape(ingredient, single) {
+    var viewShape = ingredientAttr(ingredient, currentView+"Shape");
+    if (viewShape) return choose(viewShape);
+    var placedShape = ingredientAttr(ingredient, "placedShape");
+    if (placedShape) return choose(placedShape);
+    var defaultShape = ingredientAttr(ingredient, "shape");
+    if (Array.isArray(defaultShape)) {
+      if (single) return defaultShape[0];
+      return choose(defaultShape)
+    }
+  }
+  function updateSize(placed) {
+    var size = 32*foodScale;
+    size *= (ingredientAttr(placed.id, "scale")||1);
+    var height = 1;
+    if ((placed.shape && shapeMeta.short.indexOf(placed.shape) !== -1) || shapeMeta.short.indexOf(ingredients[placed.id].shape) !== -1) {
+      height = 0.5;
+    }
+    var oldHeight = placed.height;
+    placed.height = size*(ingredientAttr(placed.id, "height")||height);
+    placed.width = size*(ingredientAttr(placed.id, "width")||0.5);
+    // adjust y based on height so bottom is the same
+    if (oldHeight && oldHeight !== placed.height) {
+      placed.y += (oldHeight - placed.height)/2;
+    }
+  }
+  function placeIngredient(ingredient, x, y) {
+    var info = ingredients[ingredient];
+    var h = info.h; var s = info.s; var l = info.l;
+    if (Array.isArray(info.h)) { // select random color
+      var index = Math.floor(Math.random()*info.h.length);
+      h = info.h[index]; s = info.s[index]; l = info.l[index];
+    }
+    var shape = chooseShape(ingredient);
+    var a = ingredientAttr(ingredient, "a") || 1;
+    var r = choose(ingredientAttr(ingredient, "r")) || 0;
+    var placed = {id:ingredient, x:x, y:y, r:r, shape:shape, h:h, s:s, l:l, a:a};
+    updateSize(placed);
+    viewData[currentView].total.push(placed);
+    var func = ingredientAttr(ingredient, "onPlace");
+    if (func) func(placed);
+    return placed;
+  }
+  function deleteIngredient(placed) {
+    for (var i = 0; i < viewData[currentView].total.length; i++) {
+      if (viewData[currentView].total[i] === placed) {
+        viewData[currentView].total.splice(i, 1);
+        break;
+      }
+    }
+    var behavior = ingredientAttr(placed.id, "behavior");
+    if (viewInfo[currentView].holdsLiquid && placed.hide && (behavior === 1 || ingredientAttr(placed.id, "dissolve") || placed.pseudo)) {
+      removeLiquid(placed.h, placed.s, placed.l);
+    }
+  }
+  function stainIngredient(placed, h, s, l) {
+    var rgb1 = hslToRgb(placed.h/360, placed.s/100, placed.l/100);
+    var rgb2 = hslToRgb(h/360, s/100, l/100);
+    var rgb = [(rgb1[0] + rgb2[0])/2, (rgb1[1] + rgb2[1])/2, (rgb1[2] + rgb2[2])/2];
+    var hsl = rgbToHsl(rgb[0], rgb[1], rgb[2]);
+    placed.h = Math.round(hsl[0]*360);
+    placed.s = Math.round(hsl[1]*100);
+    placed.l = Math.round(hsl[2]*100);
+  }
+  function choose(array) {
+    if (Array.isArray(array)) {
+      return array[Math.floor(Math.random()*array.length)];
+    }
+    return array;
+  }
+  function chooseColor(ingredient) {
+    var info = ingredients[ingredient];
+    if (Array.isArray(info.h)) {
+      var index = Math.floor(Math.random()*info.h.length);
+      return [info.h[index], info.s[index], info.l[index]];
+    }
+    return [info.h, info.s, info.l];
+  }
+  function checkReactions(placed,withOthers) {
+    var reactions1 = ingredientAttr(placed.id, "reactions");
+    var behavior = ingredientAttr(placed.id, "behavior");
+    var reacted = false;
+    if (!withOthers) withOthers = viewData[currentView].total;
+    for (var i = 0; i < withOthers.length; i++) {
+      var other = withOthers[i];
+      if (placed.id === other.id) continue;
+      if (!other.done && !other.done2) continue;
+      reacted = false;
+      if (reactions1) {
+        for (var key in reactions1) {
+          if (ingredientIsType(other.id, key)) {
+            reacted = reactIngredients(placed, other, reactions1[key]);
+            if (reacted) break;
+          }
+        }
+      }
+      var reactions2 = ingredientAttr(other.id, "reactions");
+      if (reactions2) {
+        for (var key in reactions2) {
+          if (ingredientIsType(placed.id, key)) {
+            reacted = reactIngredients(other, placed, reactions2[key]);
+            if (reacted) break;
+          }
+        }
+      }
+      if (reacted) break;
+      if (behavior === 1 && viewInfo[currentView].holdsLiquid && ingredientAttr(other.id, "dissolve") && !other.hide) {
+        other.hide = true;
+        other.done = true;
+        addLiquid(other.h, other.s, other.l);
+      }
+    }
+    return reacted;
+  }
+  function reactIngredients(placed1, placed2, params) {
+    var placed1original = placed1.id;
+    var placed2original = placed2.id;
+    if (params.tempMin && viewData[currentView].temp < params.tempMin) return false;
+    if (params.noHidden && (placed1.hide || placed2.hide)) return false;
+    if (params.set1 !== undefined) {
+      if (params.set1 === null) deleteIngredient(placed1);
+      else if (placed1.id !== params.set1) {
+        placed1.original = [placed1original, placed2original];
+        changeIngredient(placed1, choose(params.set1));
+      }
+    }
+    if (params.set2 !== undefined) {
+      if (params.set2 === null) deleteIngredient(placed2);
+      else if (placed2.id !== params.set2) {
+        placed2.original = [placed2original, placed1original];
+        changeIngredient(placed2, choose(params.set2));
+      }
+    }
+    if (params.shape1) {
+      placed1.shape = choose(params.shape1);
+      updateSize(placed1);
+    }
+    if (params.shape2) {
+      placed2.shape = choose(params.shape2);
+      updateSize(placed2);
+    }
+    if (params.color1) {
+      var hsl = hexToHsl(choose(params.color1));
+      colorIngredient(placed1, hsl[0]*360, hsl[1]*100, hsl[2]*100);
+    }
+    if (params.color2) {
+      var hsl = hexToHsl(choose(params.color2));
+      colorIngredient(placed2, hsl[0]*360, hsl[1]*100, hsl[2]*100);
+    }
+    return true;
+  }
+  function addLiquid(h, s, l) {
+    viewData[currentView].liquid++;
+    var rgb = hslToRgb(h/360, s/100, l/100);
+    viewData[currentView].liquidR += rgb[0];
+    viewData[currentView].liquidG += rgb[1];
+    viewData[currentView].liquidB += rgb[2];
+  }
+  function removeLiquid(h, s, l) {
+    if (!viewInfo[currentView].holdsLiquid) return;
+    viewData[currentView].liquid--;
+    var rgb = hslToRgb(h/360, s/100, l/100);
+    viewData[currentView].liquidR -= rgb[0];
+    viewData[currentView].liquidG -= rgb[1];
+    viewData[currentView].liquidB -= rgb[2];
+  }
+  function containIngredient(placed) {
+    var behavior = ingredientAttr(placed.id, "behavior");
+    if (behavior > 0) {
+      placed.done2 = true;
+    }
+    else {
+      placed.done = true;
+    }
+    // else {
+    //   placed.hide = false;
+    // }
+    var delete_ = ingredientAttr(placed.id,"delete");
+    if (delete_ || (ingredientAttr(placed.id,"dissolve") && viewData[currentView].liquid)) {
+      placed.hide = true;
+      placed.done = true;
+    }
+    if ((behavior === 1 && viewInfo[currentView].holdsLiquid) || ((behavior === 2 || ingredientAttr(placed.id,"stain")) && viewData[currentView].liquid)) {
+      if (!(delete_ && !viewData[currentView].liquid)) addLiquid(placed.h, placed.s, placed.l);
+      if (behavior === 1) { placed.hide = true; }
+    }
+    var dropInto = ingredientAttr(placed.id, "dropInto");
+    var dropIntoV = ingredientAttr(placed.id, "dropIntoV") || 0;
+    var landedShape = ingredientAttr(placed.id, "landedShape");
+    if (dropInto && placed.vy >= dropIntoV) {
+      changeIngredient(placed, dropInto);
+    }
+    else if (landedShape) {
+      placed.shape = landedShape;
+    }
+    var onLand = ingredientAttr(placed.id, "onLand");
+    if (onLand) onLand(placed);
+    if (!placed.tempAdded) {
+      var addTemp = ingredientAttr(placed.id, "temp");
+      if (addTemp !== undefined && ( (addTemp > 20 && viewData[currentView].temp < addTemp) || (addTemp < 20 && viewData[currentView].temp > addTemp) ) ) {
+        viewData[currentView].temp = addTemp;
+        tempCheck();
+        placed.tempAdded = true;
+      }
+    }
+    // Do Reactions
+    if (!viewInfo[currentView].reactionContact) checkReactions(placed);
+  }
+  function uncontainAll() {
+    for (var i = 0; i < viewData[currentView].total.length; i++) {
+      var placed = viewData[currentView].total[i];
+      if (placed.done || placed.done2) {
+        placed.vx = 0;
+        placed.vy = 0;
+        placed.vr = 0;
+      }
+      if (placed.done2 && ingredientAttr(placed.id,"behavior") === 2) placed.done2 = false;
+      else if (placed.done2 && !placed.hide) { placed.done2 = false; }
+      placed.done = false;
+    }
+  }
+  roomTemp = 20;
+  function tickPlaced() {
+    if (viewInfo[currentView] !== undefined && viewInfo[currentView].hitbox) {
+      var bowlImg = loadImage(viewInfo[currentView].image);
+      var hitbox = viewInfo[currentView].hitbox;
+    }
+    else {var hitbox = null}
+    var view = viewData[currentView];
+
+    // Temperature
+    if (view.temp === undefined) view.temp = 20;
+    if (view.tempIncrease) {
+      view.temp += Math.min(view.temp/200,100);
+      if (view.temp < roomTemp) view.temp += 0.6;
+    }
+    else if (view.tempDecrease) {
+      view.temp -= (view.temp+roomTemp)/100;
+      if (view.temp > roomTemp) view.temp -= 0.6;
+    }
+    else if (Math.round(view.temp) !== roomTemp) {
+      view.temp -= Math.sign(view.temp-roomTemp)*0.01;
+    }
+    tempCheck();
+
+    for (var i = 0; i < view.total.length; i++) {
+      var placed = view.total[i];
+      var behavior = ingredientAttr(placed.id, "behavior") || 0;
+      if (placed.done || placed.done2 || placed.hide) { continue; }
+      var movable = ingredientAttr(placed.id, "movable");
+      if (movable === false) { placed.done = true; placed.done2 = true; continue; }
+      if (placed.vx === undefined) { placed.vx = 0; }
+      else if (placed.vx) { placed.x += placed.vx; }
+      if (placed.vy === undefined) { placed.vy = 0; }
+      else if (placed.vy) { placed.y += placed.vy; }
+      if (!behavior && viewInfo[currentView].doRotation !== false) {
+        if (placed.vr === undefined) { placed.vr = 0; }
+        else if (placed.vr) { placed.r += placed.vr; placed.r = placed.r % 360; }
+      }
+      // gravity
+      if (behavior === 3) { // gas physics
+        placed.vy = -0.5;
+        placed.vx = Math.max(Math.min(placed.vx, 0.1), -0.1);
+        placed.vx -= Math.sign(placed.vx)*0.1
+      }
+      else {
+        placed.vy += 0.5;
+        placed.vy = Math.min(placed.vy, 13);
+      }
+      // check collision with other placed
+      for (var j = 0; j < view.total.length; j++) {
+        if (i === j) { continue; }
+        var other = view.total[j];
+        if (other.hide) { continue; }
+        if (placed.x - placed.width/2.5 < other.x + other.width/2.5 &&
+            placed.x + placed.width/2.5 > other.x - other.width/2.5 &&
+            placed.y < (other.y + other.height*(viewInfo[currentView].placedHeightMul||0.5))+5 && 
+            placed.y > (other.y - other.height*(viewInfo[currentView].placedHeightMul||0.5))
+        ) {
+          // collision
+          var placedOnCollide = ingredientAttr(placed.id, "onCollide");
+          if (placedOnCollide) placedOnCollide(placed,other);
+          else {
+            var otherOnCollide = ingredientAttr(other.id, "onCollide");
+            if (otherOnCollide) otherOnCollide(other,placed);
+          }
+          // stop ingredient if applicable
+          if (behavior < 3 && placed.vy >= 0 && (other.done||other.done2) && placed.y > canvas.height*(viewInfo[currentView].maxHeight||0) && placed.y < other.y && placed.x > leftBound-placed.width/2 && placed.x < rightBound+placed.width/2) {
+            containIngredient(placed);
+            if (ingredientAttr(placed.id,"stain")) {
+              stainIngredient(other, placed.h, placed.s, placed.l);
+            }
+            if (viewInfo[currentView].reactionContact) {
+              checkReactions(placed, [other]);
+            }
+          }
+          // bounce in opposite direction
+          else if (placed.x < other.x) {
+            // random between -5 and 0
+            placed.vx = -Math.random()*5;
+            placed.vr = -Math.random()*5;
+          }
+          else {
+            // random between 0 and 5
+            placed.vx = Math.random()*5;
+            placed.vr = Math.random()*5;
+          }
+        }
+      }
+      // if its outside the canvas, remove it
+      if (!placed.noDelete && (placed.x < -50 || placed.x > canvas.width+50 || placed.y > canvas.height+50 || (placed.y < -50 && behavior === 3))) {
+        view.total.splice(i, 1);
+        i--;
+      }
+      // check collision with the bowl
+      // equations: ctx.fillRect(bowlImg.width*hitbox[0] + canvas.width/2 - bowlImg.width/2*5, bowlImg.height*hitbox[1] + canvas.height/2 - bowlImg.height/2*5+75, bowlImg.width*hitbox[2], bowlImg.height*hitbox[4]);
+      // if inside hitbox, set done to true
+      if (behavior < 3 && hitLine) {
+        // if the bottom of the placed is below the hitline, set done true
+        if (placed.y + placed.height/2 >= hitLine && placed.y + placed.height/2 < hitLine+20 && placed.x > leftBound && placed.x < rightBound) {
+          containIngredient(placed);
+          placed.y = hitLine - placed.height/2;
+        }
+      }
+    }
+  }
+  function ingredientsAt(x,y) {
+    // return all ingredients that collide with x and y
+    var ingredients = [];
+    var liquid = null;
+    for (var i = 0; i < viewData[currentView].total.length; i++) {
+      var placed = viewData[currentView].total[i];
+      if (placed.hide) {
+        if (viewInfo[currentView].holdsLiquid && (ingredientAttr(placed.id, "behavior") === 1 || ingredientAttr(placed.id, "dissolve") || placed.pseudo)) {
+          liquid = placed;
+        }
+        continue;
+      }
+      if (x < placed.x + placed.width/2 &&
+          x > placed.x - placed.width/2 &&
+          y < placed.y + placed.height/2 &&
+          y > placed.y - placed.height/2) {
+        ingredients.push(placed);
+      }
+    }
+    if (ingredients.length === 0 && liquid && mousePos.y > canvas.height*(viewInfo[currentView].maxHeight||0) && mousePos.x > leftBound && mousePos.x < rightBound && mousePos.y < hitLine) {
+      ingredients.push(liquid);
+    }
+    return ingredients;
+  }
+  lastLiquidColor = null;
+  lastLiquidImg2 = null;
+  viewRenderer = {
+    "bowl": function(hideGUI) {
+      // draw from file table.png to fit the whole canvas
+      ctx.drawImage(loadImage('table.png'), 0, 0, canvas.width, canvas.height);
+      ctx.shadowOffsetY = 7;
+      // Heat glow
+      if (viewData[currentView].temp >= 20) {
+        var heatIndex = Math.min(255, Math.round((viewData[currentView].temp-20)*10));
+        ctx.shadowColor = "rgb("+heatIndex+",0,0)"
+      }
+      else {
+        // -30 to 19
+        var heatIndex = Math.min(255, Math.round((20-viewData[currentView].temp)*10));
+        ctx.shadowColor = "rgb(0,0,"+heatIndex+")"
+      }
+      ctx.shadowBlur = 20;
+      var bowlImg = loadImage(viewInfo[currentView].image);
+      // put in the middle on the table
+      ctx.drawImage(bowlImg, canvas.width/2 - bowlImg.width/2*5, canvas.height/2 - bowlImg.height/2*5+75, bowlImg.width*5, bowlImg.height*5);
+      ctx.shadowColor = "transparent";
+      if (viewData.bowl.liquid) {
+        var liquidColor = [viewData.bowl.liquidR/viewData.bowl.liquid, viewData.bowl.liquidG/viewData.bowl.liquid, viewData.bowl.liquidB/viewData.bowl.liquid]
+        var hsl = rgbToHsl(liquidColor[0], liquidColor[1], liquidColor[2]);
+        liquidColor = [Math.round(hsl[0]*360), Math.round(hsl[1]*100), Math.round(hsl[2]*100)];
+        var liquidImg = colorizeStandard('bowl_liquid.png', liquidColor[0], liquidColor[1], liquidColor[2]);
+        if (liquidImg.loaded === false) {
+          if (lastLiquidColor) {
+            liquidColor = lastLiquidColor;
+            liquidImg = colorizeStandard('bowl_liquid.png', lastLiquidColor[0], lastLiquidColor[1], lastLiquidColor[2]);
+          }
+        }
+        else {
+          lastLiquidColor = liquidColor;
+        }
+        ctx.drawImage(liquidImg, canvas.width/2 - liquidImg.width/2*5, canvas.height/2 - liquidImg.height/2*5+75, liquidImg.width*5, liquidImg.height*5);
+      }
+      else if (lastLiquidColor) {
+        lastLiquidColor = null;
+        lastLiquidImg2 = null;
+      }
+      drawPlaced();
+      // draw transparent ingredient at mousePos
+      if (!hideGUI) drawCursor();
+      if (viewData.bowl.liquid) {
+        if (!viewData.bowl.liquidSolid) ctx.globalAlpha = 0.75;
+        var liquidImg2 = colorizeStandard('bowl_liquid_front.png', liquidColor[0], liquidColor[1], liquidColor[2]);
+        if (liquidImg2.loaded === false) {
+          if (lastLiquidImg2) {
+            var liquidImg2 = lastLiquidImg2;
+            liquidColor = lastLiquidColor;
+          }
+        }
+        else {
+          lastLiquidImg2 = liquidImg2;
+        }
+        ctx.drawImage(liquidImg2, canvas.width/2 - liquidImg2.width/2*5, canvas.height/2 - liquidImg2.height/2*5+75, liquidImg2.width*5, liquidImg2.height*5);
+        ctx.globalAlpha = 1;
+      }
+      var bowlImg2 = loadImage(viewInfo[currentView].imageFront);
+      ctx.drawImage(bowlImg2, canvas.width/2 - bowlImg.width/2*5, canvas.height/2 - bowlImg.height/2*5+75, bowlImg.width*5, bowlImg.height*5);
+      // draw line in yellow
+      // ctx.fillStyle = "rgba(255,255,0)";
+      // ctx.fillRect(leftBound, hitLine, rightBound - leftBound, 5);
+    },
+    "stack": function(hideGUI) {
+      // draw from file table.png to fit the whole canvas
+      ctx.drawImage(loadImage('table.png'), 0, 0, canvas.width, canvas.height);
+      ctx.shadowOffsetY = 7;
+      // Heat glow
+      if (viewData[currentView].temp >= 20) {
+        var heatIndex = Math.min(255, Math.round((viewData[currentView].temp-20)*10));
+        ctx.shadowColor = "rgb("+heatIndex+",0,0)"
+      }
+      else {
+        // -30 to 19
+        var heatIndex = Math.min(255, Math.round((20-viewData[currentView].temp)*10));
+        ctx.shadowColor = "rgb(0,0,"+heatIndex+")"
+      }
+      ctx.shadowBlur = 20;
+      var bowlImg = loadImage('plate.png');
+      // put in the middle on the table
+      ctx.drawImage(bowlImg, canvas.width/2 - bowlImg.width/2*5, canvas.height/2 - bowlImg.height/2*5+75, bowlImg.width*5, bowlImg.height*5);
+      ctx.shadowColor = "transparent";
+      drawPlaced();
+      // draw transparent ingredient at mousePos
+      if (!hideGUI) drawCursor();
+      // draw line in yellow
+      // ctx.fillStyle = "rgba(255,255,0)";
+      // ctx.fillRect(leftBound, hitLine, rightBound - leftBound, 5);
+    }
+  }
+  viewInfo = {
+    "bowl": {
+      "image": "bowl.png",
+      "imageFront": "bowl_front.png",
+      "hitbox": [0.5,3,4,1,0.5],
+      "holdsLiquid": true,
+      "doRotation": true,
+      "maxHeight": 0.45,
+      "placedHeightMul": 0.5
+    },
+    "stack": {
+      "image": "plate.png",
+      "hitbox": [0.5,3,4,1,0.5],
+      "holdsLiquid": false,
+      "doRotation": false,
+      "maxHeight": 0.1,
+      "placedHeightMul": 0.7,
+      "foodScale": 2.75,
+      "reactionContact": true
+    }
+  }
+  // Holiday detection
+  var currentMonth = new Date().getMonth();
+  if (window.location.href.includes("holiday=false")) {}
+  else if (currentMonth == 9) { // October
+      viewInfo.bowl.image = "bowl_spooky.png";
+      viewInfo.bowl.imageFront = "bowl_front_spooky.png";
+  }
+  leftBound = 0;
+  rightBound = 0;
+  hitLine = 0;
+  function changeView(view) {
+    hideDialog();
+    currentView = view;
+    document.getElementById('controlsBar').querySelectorAll('button[selected]').forEach(function(button) {
+      button.removeAttribute('selected');
+    });
+    document.getElementById('controlsBar').querySelector('#button-'+view).setAttribute('selected', '');
+    var info = viewInfo[view];
+    if (!viewData[view]) {
+      viewData[view] = {"total":[],"contained":[]};
+      if (info) {
+        if (viewInfo[view].holdsLiquid) {
+          viewData[view].liquid = 0;
+          viewData[view].liquidR = 0;
+          viewData[view].liquidG = 0;
+          viewData[view].liquidB = 0;
+        }
+      }
+    }
+    if (info) {
+      if (info.foodScale) {
+        foodScale = info.foodScale;
+      }
+      else {
+        foodScale = 2.25
+      }
+    }
+  }
+  function clearView() {
+    viewData[currentView].total = [];
+    viewData[currentView].contained = [];
+    if (viewData[currentView].liquid) {
+      viewData[currentView].liquid = 0;
+      viewData[currentView].liquidR = 0;
+      viewData[currentView].liquidG = 0;
+      viewData[currentView].liquidB = 0;
+      viewData[currentView].liquidSolid = false;
+    }
+    turnOff("tempIncrease");
+    turnOff("tempDecrease");
+    viewData[currentView].temp = 20;
+    hideDialog();
+  }
+
+  function selectIngredient(ingredient) {
+    selectTool(null);
+    var onDeselect = ingredientAttr(currentIngredient, "onDeselect");
+    if (onDeselect) {
+      onDeselect(currentIngredient);
+    }
+    currentIngredient = ingredient;
+    currentIngredientProps = ingredientAttr(currentIngredient, "props")||{};
+    if (!ingredient || !ingredients[ingredient]) { return; }
+    document.getElementById('prepText').value = formatName(ingredient);
+    var onSelect = ingredientAttr(ingredient, "onSelect");
+    if (onSelect) {
+      onSelect(ingredient);
+    }
+  }
+  function formatName(ingredient) {
+    if (ingredients[ingredient] !== undefined && ingredients[ingredient].name) {
+      ingredient = ingredients[ingredient].name;
+    }
+    // get all matches of =<name>=
+    var matches = ingredient.match(/=[^=]*=/g);
+    ingredient = ingredient.replace(/_/g, " ");
+    ingredient = ingredient.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    )
+    ingredient = ingredient.replace(" And ", " and ");
+    ingredient = ingredient.replace(" Or ", " or ");
+    ingredient = ingredient.replace(" On ", " on ");
+    ingredient = ingredient.replace(" With ", " with ");
+    ingredient = ingredient.replace(" 'N ", " 'n ");
+    if (matches) {
+      for (var i = 0; i < matches.length; i++) {
+        var match = matches[i];
+        var name = match.substring(1, match.length-1);
+        if (name === name.toLowerCase()) { name = name.toUpperCase() }
+        ingredient = ingredient.replace(new RegExp(match, 'gi'), name);
+      }
+    }
+    return ingredient;
+  }
+  function formatTemp(n) {
+    var units = settings.units || "metric";
+    if (units === "metric") {
+      return Math.round(n) + "°C";
+    }
+    else if (units === "imperial") {
+      return Math.round(n*9/5+32) + "°F";
+    }
+  }
+  defaultSearchResults = [];
+  function normalizeQuery(query) {
+    query = query.replace(/[‘’]/g,"'");
+    query = query.replace(/["“”]/g,"");
+    return query;
+  }
+  function searchIngredients(query) {
+    var searchResults = document.getElementById('searchResults');
+    searchResults.innerHTML = "";
+    query = query ?? document.getElementById('prepText').value;
+    var queryO = query.toLowerCase().trim();
+    query = normalizeQuery(queryO.replace(/[ _\-–—]+/g, ""));
+    if (!query) {
+      // hideSearchResults(); return;
+      var results = defaultSearchResults;
+    }
+    else {
+      var showHidden = false;
+      if (query === "*test") { query = "" }
+      else if (query === "*hidden") { query = ""; showHidden = true }
+      var redo = false;
+      var count = 0;
+      var done = {};
+      var bestResults = [];
+      var otherResults = [];
+      var poorResults = [];
+      var queryO_ = queryO.replace(/ /g, "_");
+      if (ingredients[queryO_] && ingredients[queryO_].hidden) {
+        bestResults.push(queryO_);
+        count++;
+      }
+      for (var key in ingredients) {
+        if (count > 10 && query.length) { break; }
+        var strippedKey = key.replace(/_/g, "");
+        var index = strippedKey.indexOf(query);
+        if ((ingredients[key].hidden && !showHidden) || (!ingredients[key].hidden && showHidden)) { continue }
+        if (index === 0) {
+          bestResults.push(key);
+          count++;
+          done[key] = true;
+        }
+      }
+      for (var key in ingredients) {
+        if (done[key]) { continue }
+        if (count > 10 && query.length) { break; }
+        var strippedKey = key.replace(/_/g, "");
+        var index = strippedKey.indexOf(query);
+        if ((ingredients[key].hidden && !showHidden) || (!ingredients[key].hidden && showHidden)) { continue }
+        if (index !== -1) {
+          otherResults.push(key);
+          count++;
+          done[key] = true;
+        }
+        else if (ingredients[key].keywords && ingredients[key].keywords.indexOf(query) !== -1) {
+          poorResults.push(key);
+          count++;
+          done[key] = true;
+        }
+      }
+      for (var key in ingredients) {
+        if (done[key]) { continue }
+        if (count > 10 && query.length) { break; }
+        if (ingredients[queryO_] && ingredientIsType(key, queryO_) && key !== queryO_) {
+          poorResults.push(key);
+          count++;
+          continue;
+        }
+      }
+      // sort bestResults by length, shortest first
+      bestResults.sort(function(a, b) {
+        return a.length - b.length;
+      });
+      var results = bestResults.concat(otherResults, poorResults);
+    }
+    for (var i = 0; i < results.length; i++) {
+      var key = results[i];
+      var info = ingredients[key];
+      if (!info) continue;
+      var canvas = colorizeStandard("../shapes/png/"+choose(info.shape)+".png", info.h, info.s, info.l);
+      var div = document.createElement('div');
+      div.className = 'searchResult';
+      div.innerHTML = `<img src='${canvas.src}' style='opacity:${ingredientAttr(key,"a") ?? 1}'><span>${formatName(key)}</span>`;
+      div.setAttribute('data-ingredient', key);
+      if (info.desc) div.setAttribute('title', info.desc);
+      div.onclick = function() {
+        selectIngredient(this.getAttribute('data-ingredient'));
+        document.getElementById('prepText').value = formatName(currentIngredient);
+        document.getElementById('searchResultsDiv').style.display = 'none';
+        controlState.inMenu = false;
+      }
+      if (canvas.loaded === false) {
+        redo = true;
+      }
+      else {
+        searchResults.appendChild(div);
+      }
+    }
+    if (redo) {
+      setTimeout(function() {
+        searchIngredients(queryO);
+      }, 100);
+      return;
+    }
+    if (results.length == 0) {
+      searchResults.innerHTML = "<span>No ingredients found... :(</span>";
+    }
+    showSearchResults();
+  }
+  function addIngredient(name, data) {
+    name = name.toLowerCase().replace(/ /g, "_");
+    ingredients[name] = data;
+    finalizeIngredient(name);
+  }
+  function editIngredient(name, data) {
+    var info = ingredients[name];
+    for (var key in data) {
+      info[key] = data[key];
+    }
+    finalizeIngredient(name);
+  }
+  function finalizeIngredient(ingredient) {
+    var info = ingredients[ingredient];
+    if (info.r) {
+      var r = info.r;var g = info.g;var b = info.b;
+      var hsl = rgbToHsl(r, g, b);
+      info.h = hsl[0] * 360;
+      info.s = hsl[1] * 100;
+      info.l = hsl[2] * 100;
+    }
+    if (info.rgb) {
+      var rgb = info.rgb.split(",");
+      var hsl = rgbToHsl(rgb[0], rgb[1], rgb[2]);
+      info.h = hsl[0] * 360;
+      info.s = hsl[1] * 100;
+      info.l = hsl[2] * 100;
+    }
+    if (info.hsl) {
+      var hsl = info.hsl.split(",");
+      info.h = hsl[0];
+      info.s = hsl[1];
+      info.l = hsl[2];
+    }
+    if (info.color) {
+      var colors = [];
+      if (!Array.isArray(info.color)) info.color = [info.color];
+      for (var i = 0; i < info.color.length; i++) {
+        var color = info.color[i];
+        if (color.charCodeAt(0) == 35) {
+          color = color.substring(1);
+        }
+        var r = parseInt(color.substring(0, 2), 16);
+        var g = parseInt(color.substring(2, 4), 16);
+        var b = parseInt(color.substring(4, 6), 16);
+        var hsl = rgbToHsl(r, g, b);
+        colors.push([hsl[0] * 360, hsl[1] * 100, hsl[2] * 100]);
+      }
+      if (colors.length === 1) {
+        info.h = colors[0][0];
+        info.s = colors[0][1];
+        info.l = colors[0][2];
+      }
+      else {
+        info.h = colors.map(function(a) { return a[0] });
+        info.s = colors.map(function(a) { return a[1] });
+        info.l = colors.map(function(a) { return a[2] });
+      }
+    }
+    if (info.cookColor && info.cookColor.length > 4) {
+      var color = info.cookColor;
+      if (color.charCodeAt(0) == 35) {
+        color = color.substring(1);
+      }
+      var r = parseInt(color.substring(0, 2), 16);
+      var g = parseInt(color.substring(2, 4), 16);
+      var b = parseInt(color.substring(4, 6), 16);
+      var hsl = rgbToHsl(r, g, b);
+      info.cookColor = [hsl[0] * 360, hsl[1] * 100, hsl[2] * 100];
+    }
+    if (!info.h) { info.h = ingredientAttr(ingredient, "h") || 0 }
+    if (!info.s) { info.s = ingredientAttr(ingredient, "s") || 0 }
+    if (!info.l) { info.l = ingredientAttr(ingredient, "l") || 50 }
+    if (!info.shape) {
+      info.shape = ingredientAttr(ingredient, "shape") || "rhombus";
+    }
+    else {
+      if (shapeMeta.short.indexOf(info.shape) !== -1 && !info.height) {
+        info.height = 0.5;
+      }
+    }
+    if (!info.group) {
+      var parentGroup = ingredientAttr(ingredient, "group");
+      if (!parentGroup || parentGroup === "generic") {
+        info.group = "other";
+      }
+    }
+    if (info.group === "generic" && info.hidden !== false) { info.hidden = true }
+    if (info.name) {
+      info.keywords = (info.keywords||"") + info.name;
+    }
+    if (info.dishName) {
+      info.keywords = (info.keywords||"") + info.dishName;
+    }
+    if (info.adj) {
+      info.keywords = (info.keywords||"") + info.adj;
+    }
+    if (info.cookName) {
+      info.keywords = (info.keywords||"") + info.cookName;
+    }
+    if (info.keywords) {
+      if (Array.isArray(info.keywords)) info.keywords = info.keywords.join("");
+      info.keywords = info.keywords.replace(/[_ =]+/g, "").toLowerCase();
+    }
+    if (info.reactions) {
+      for (var key in info.reactions) {
+        var r = info.reactions[key];
+        if (r.tempMin) { info.tempReact = true; }
+        if (r.set1 && ingredients[r.set1]) {
+          if (ingredients[r.set1].parts === null) continue;
+          if (!ingredients[r.set1].parts) ingredients[r.set1].parts = [];
+          if (ingredients[r.set1].parts.indexOf(ingredient) === -1) {
+            ingredients[r.set1].parts.push(ingredient);
+          }
+          if (ingredients[r.set1].parts.indexOf(key) === -1) {
+            ingredients[r.set1].parts.push(key);
+          }
+        }
+        if (r.set2 && ingredients[r.set2]) {
+          if (ingredients[r.set2].parts === null) continue;
+          if (!ingredients[r.set2].parts) ingredients[r.set2].parts = [];
+          if (ingredients[r.set2].parts.indexOf(ingredient) === -1) {
+            ingredients[r.set2].parts.push(ingredient);
+          }
+          if (ingredients[r.set2].parts.indexOf(key) === -1) {
+            ingredients[r.set2].parts.push(key);
+          }
+        }
+      }
+    }
+    if (info.broken) {
+      if (!Array.isArray(info.broken)) var l = [info.broken];
+      else var l = info.broken;
+      for (var i = 0; i < l.length; i++) {
+        var broken = l[i];
+        if (ingredients[broken]) {
+          if (ingredients[broken].parts === null) continue;
+          if (ingredientAttr(broken, "behavior") === 1) continue;
+          if (!ingredients[broken].parts) ingredients[broken].parts = [];
+          if (ingredients[broken].parts.indexOf(ingredient) === -1) {
+            ingredients[broken].parts.push(ingredient);
+          }
+        }
+      }
+    }
+    if (info.pin) {
+      defaultSearchResults.push(ingredient);
+    }
+    if (info.behavior == 1 && !info.placedShape) info.placedShape = "droplets_some";
+    if (info.behavior == 2 && !info.placedShape) info.placedShape = "squares_some";
+  }
+  uninheritedAttributes = ["name","short","cookName"]
+  function ingredientAttr(ingredient, attr) {
+    if (ingredients[ingredient] === undefined) { return undefined; }
+    if (ingredients[ingredient][attr] === undefined && uninheritedAttributes.indexOf(attr) === -1){
+      if (ingredients[ingredient].type) {
+        return ingredientAttr(ingredients[ingredient].type, attr);
+      }
+    }
+    else {
+      return ingredients[ingredient][attr];
+    }
+    return undefined;
+  }
+  function ingredientIsType(ingredient, type) {
+    if (ingredient === type) { return true }
+    if (ingredients[ingredient] === undefined) { return false }
+    if (ingredients[ingredient].type === type) { return true }
+    return ingredientIsType(ingredients[ingredient].type, type);
+  }
+
+  function sortRecipes() {
+    var sortedMap = {};
+    var sortedKeys = Object.keys(recipeMap).sort(function(a, b) {
+      // if theyre the same length, sort by total length
+      var al = a.split("+").length; var bl = b.split("+").length;
+      if (a.indexOf("~") !== -1) {
+        al -= 99999;
+      }
+      if (b.indexOf("~") !== -1) {
+        bl -= 99999;
+      }
+      if (al === bl) {
+        return b.length - a.length;
+      }
+      return bl - al;
+    });
+    for (var i = 0; i < sortedKeys.length; i++) {
+      sortedMap[sortedKeys[i]] = recipeMap[sortedKeys[i]];
+    }
+    recipeMap = sortedMap;
+  }
+  function addRecipe(recipe,result) {
+    dishRecipes[recipe] = result;
+    recipeMap[recipe] = recipe.split("+");
+    // if the first element starts with "&", split by ":"
+    if (recipeMap[recipe][0].charCodeAt(0) === 38) {
+      var split = recipeMap[recipe][0].split(":");
+      recipeMap[recipe][0] = split[1];
+    }
+    // if the first element starts with "=", remove the "="
+    var modifier = recipeMap[recipe][0].charCodeAt(0);
+    if (modifier === 61 || modifier === 126) {
+      recipeMap[recipe][0] = recipeMap[recipe][0].substring(1);
+    }
+  }
+
+  function generateDishName(ingredients) {
+    if (!ingredients) {
+      // copy the current view's ingredients
+      ingredients = viewData[currentView].total.slice();
+    }
+    var used = {};
+    var nameMap = {};
+    var toIgnoreNames = [];
+    for (var i = 0; i < ingredients.length; i++) {
+      if (!ingredients[i].done && !ingredients[i].done2 && !ingredients[i].hide) {
+        // remove
+        ingredients.splice(i, 1);
+        i--;
+        continue;
+      }
+      if (ingredients[i].derivedFrom && used[ingredients[i].id] !== undefined) {
+        // remove from ingredients
+        ingredients.splice(i, 1);
+        i--;
+        continue;
+      }
+      var parts = ingredientAttr(ingredients[i].id, "parts");
+      if (ingredients[i].original) {
+        // concat with ingredients
+        // if (true || ingredientAttr(ingredients[i].id, "behavior") !== 1) {
+        ingredients = ingredients.concat(ingredients[i].original.map(function(a) { return {id:a, noName:true, derivedFrom:ingredients[i], done:true} }));
+        ingredients[i].split = true;
+        // }
+        toIgnoreNames = toIgnoreNames.concat(ingredients[i].original);
+      }
+      else if (parts && !ingredients[i].derivedFrom) {
+        toIgnoreNames = toIgnoreNames.concat(parts);
+        // concat with ingredients
+        ingredients = ingredients.concat(parts.map(function(a) { return {id:a, noName:true, derivedFrom:ingredients[i], done:true} }));
+        ingredients[i].split = true;
+      }
+      used[ingredients[i].id] = false;
+      if (!nameMap[ingredients[i].id]) { nameMap[ingredients[i].id] = [] }
+      nameMap[ingredients[i].id].push(ingredients[i]);
+    }
+    if (ingredients.length === 0) {
+      return "Absolutely Nothing";
+    }
+    // console.log(JSON.stringify(ingredients))
+    var success = true;
+    var tries = 0;
+    var recipesMade = 0;
+    while (success && tries < 20) {
+      success = false;
+      for (var recipeKey in recipeMap) {
+        // console.log("["+recipeKey+"]")
+        var recipe = recipeMap[recipeKey];
+        // & = required view
+        if (recipeKey.charCodeAt(0) === 38) {
+          var split = recipeKey.split(":");
+          var requiredView = split[0].substring(1);
+          if (currentView !== requiredView) continue;
+          var totalModifier = split[1].charCodeAt(0);
+        }
+        else {
+          var totalModifier = recipeKey.charCodeAt(0);
+        }
+        // = = exact match
+        if (totalModifier === 61) {
+          if (ingredients.length !== recipe.length) continue;
+        }
+        // ~ = no other recipes
+        else if (totalModifier === 126) {
+          if (recipesMade) continue;
+        }
+        var result = dishRecipes[recipeKey];
+        var requiredCount = recipe.length;
+        var count = 0;
+        var toUse = {};
+        var noNameCount = 0;
+        for (var i = 0; i < recipe.length; i++) {
+          var needed = recipe[i];
+          var modifier = needed.charCodeAt(needed.length-1)
+          var modifiers = {};
+          var modified = false;
+          if (modifier === 63) { // ? = optional
+            modifiers.optional = true;
+            modified = true;
+          }
+          else if (modifier === 45) { // - = inverse
+            modifiers.inverse = true;
+            modified = true;
+            requiredCount--;
+          }
+          if (modified) {
+            needed = needed.substring(0, needed.length-1);
+          }
+          var ingredientFound = false;
+          // console.log(needed,nameMap[needed]?.length,(toUse[needed]||0))
+          if (nameMap[needed] && nameMap[needed].length > (toUse[needed]||0)) {
+            if (nameMap[needed][0].derivedFrom) {
+              needed = nameMap[needed][0].derivedFrom.id;
+              // if (!nameMap[needed]) { nameMap[needed] = [ nameMap[needed][0].derivedFrom ] }
+            }
+            ingredientFound = true
+          }
+          else {
+            for (var j = 0; j < ingredients.length; j++) {
+              if (ingredientIsType(ingredients[j].id, needed) && (!used[ingredients[j].id] || modifiers.inverse)) {
+                if (modifiers.inverse) {
+                  // console.log(1)
+                  count = 0;
+                  break;
+                }
+                if (ingredients[j].derivedFrom) {
+                  if (ingredients[j].derivedFrom.used) continue;
+                  var id = ingredients[j].derivedFrom.id;
+                }
+                else var id = ingredients[j].id;
+                if (nameMap[id] && nameMap[id].length > (toUse[id]||0)) {
+                  needed = id;
+                  if (ingredients[j].noName) noNameCount++;
+                  // console.log("nameMap[needed] ("+needed+"): "+nameMap[needed])
+                  ingredientFound = true
+                  break;
+                }
+              }
+            }
+          }
+          // console.log("used[needed] ("+needed+"): "+used[needed])
+          // console.log("ingredientFound: "+ingredientFound)
+          if (ingredientFound && nameMap[needed].length) {
+            toUse[needed] = (toUse[needed]||0) + 1;
+            // console.log(toUse[needed])
+            count++;
+          }
+          else if (modifiers.optional) {
+            count++;
+          }
+          else {
+            break;
+          }
+        }
+        if (count >= requiredCount && !noNameCount) {
+          var dishWeight = 0;
+          // console.log("toUse: "+JSON.stringify(toUse))
+          for (var key in toUse) {
+            used[key] = true;
+            // remove the amount of ingredients used
+            for (var i = 0; i < toUse[key]; i++) {
+              if (!nameMap[key][0]) continue;
+              if (nameMap[key][0].derivedFrom) {
+                nameMap[key][0].derivedFrom.noName = true;
+                ingredients.splice(ingredients.indexOf(nameMap[key][0].derivedFrom), 1);
+                nameMap[key][0].derivedFrom.used = true;
+                // get the index of the derivedFrom ingredient and splice
+                var id = nameMap[key][0].derivedFrom.id;
+                nameMap[id].splice(nameMap[id].indexOf(nameMap[id][0].derivedFrom), 1);
+                // key = id;
+                // used[key] = true;
+              }
+              nameMap[key][0].used = true;
+              ingredients.splice(ingredients.indexOf(nameMap[key][0]), 1);
+              nameMap[key].splice(0, 1);
+              if (!dishWeight) {
+                var tempWeight = ingredientAttr(key, "dishWeight");
+                if (tempWeight) dishWeight = tempWeight;
+              }
+            }
+            // console.log("ingredients: "+JSON.stringify(ingredients))
+            // console.log("nameMap: "+JSON.stringify(nameMap))
+          }
+          ingredients.push({id:result,dishWeight:200+dishWeight});
+          if (!nameMap[result]) { nameMap[result] = [] }
+          nameMap[result].push(ingredients[ingredients.length-1]);
+          success = true;
+          recipesMade++;
+        }
+      }
+      tries++;
+    }
+    // console.log(ingredients);
+    // console.log(used);
+    // console.log(nameMap);
+
+    var name = " ";
+    var nameParts = []; //array of arrays with [string, weight]
+    for (var i = 0; i < ingredients.length; i++) {
+      var ingredient = ingredients[i];
+      if (ingredient.noName) { continue }
+      if (toIgnoreNames.indexOf(ingredient.id) !== -1) { continue }
+      if (used[ingredient.id]) { continue }
+      var skip = false;
+      for (var usedIngredient in used) {
+        if (used[usedIngredient] && ingredientIsType(ingredient.id, usedIngredient)) {
+          skip = true;
+          break;
+        }
+      }
+      if (skip) { continue }
+      var ingName = ingredient.id;
+      var weight = 0;
+      var type = null;
+      var adj = ingredientAttr(ingredient.id, "adj");
+      var nameOverride = ingredientAttr(ingredient.id, "name");
+      var dishNameOverride = ingredientAttr(ingredient.id, "dishName");
+      if (ingredient.cook > 0.1) {
+        var cookName = ingredientAttr(ingredient.id, "cookName");
+        if (cookName) {dishNameOverride = cookName}
+      }
+      var weightOverride = ingredient.dishWeight || ingredientAttr(ingredient.id, "dishWeight");
+      var fallback = dishNameOverride || nameOverride || ingName;
+      if (weightOverride) {
+        weight += weightOverride;
+      }
+      if (adj) {
+        ingName = adj;
+        weight -= 100;
+        type = "adj";
+      }
+      else if (dishNameOverride === null) {
+        ingName = "";
+        weight -= 1000;
+        type = "blank";
+      }
+      else if (dishNameOverride) {
+        ingName = dishNameOverride;
+        weight += 95;
+      }
+      else if (nameOverride) {
+        ingName = nameOverride;
+      }
+      nameParts.push([ingName, weight, type, fallback]);
+      used[ingredient.id] = 2;
+    }
+    var nameSorted = nameParts.sort(function(b, a) {
+      return b[1] - a[1];
+    });
+    for (var i = 0; i < nameSorted.length; i++) {
+      var type = nameSorted[i][2];
+      var fallback = nameSorted[i][3];
+      var ingName = nameSorted[i][0];
+      if (type === "adj" && i === nameSorted.length-1) {
+        ingName = fallback;
+      }
+      else if (type === "blank" && (nameSorted.length === 1 || i === nameSorted.length-1)) {
+        ingName = fallback;
+      }
+      if (nameParts.length >= 3) {
+        if (window.ingredients[fallback] && window.ingredients[fallback].short) {
+          ingName = window.ingredients[fallback].short;
+        }
+        ingName = ingName.replace(/ and /g, " & ");
+      }
+      name += ingName + " ";
+    }
+    for (var ingredient in used) {
+      if (!used[ingredient] || used[ingredient] === 2) { continue }
+      if (ingredientAttr(ingredient,"dishName") === null) { continue }
+      // used.blue_cheese = true
+      // name = "mac and cheese"
+      var words = ingredient.split(/[ _]+/);
+      // for each amount of last x words, check regex for /^(cheese) | (cheese)$| (cheese) / and replace the group
+      for (var i = 0; i < words.length; i++) {
+        var oldName = name;
+        var last_words = words.slice(-i).join(" ");
+        // mac and cheese -> mac and blue cheese
+        var regex = new RegExp("^(?:"+last_words+") | (?:"+last_words+")$| (?:"+last_words+") ", "g");
+        name = name.replace(regex, " "+ingredient+" ");
+        // cheeseburger -> blue cheeseburger
+        var regex = new RegExp(" (?:"+last_words+")|^(?:"+last_words+")", "g");
+        name = name.replace(regex, " "+ingredient);
+        if (oldName !== name) {
+          used[ingredient] = 2;
+          break;
+        }
+      }
+    }
+    name = name.trim();
+    var nameSplit = name.toLowerCase().split(/[ _]+/);
+    for (var i = 0; i < nameSplit.length; i++) {
+      var word = nameSplit[i];
+      if (window.ingredients[word]) {
+        var subtypes = [];
+        for (var ingredient in used) {
+          if (!used[ingredient] || used[ingredient] === 2) { continue }
+          if (ingredient === word) { continue }
+          if (ingredientIsType(ingredient, word)) {
+            subtypes.push(window.ingredients[ingredient]?.name || window.ingredients[ingredient]?.dishName || ingredient);
+          }
+        }
+        // do the same for toIgnoreNames array
+        for (var j = 0; j < toIgnoreNames.length; j++) {
+          var ingredient = toIgnoreNames[j];
+          if (ingredient === word) { continue }
+          if (ingredientIsType(ingredient, word)) {
+            subtypes.push(window.ingredients[ingredient]?.name || window.ingredients[ingredient]?.dishName || ingredient);
+          }
+        }
+        if (subtypes.length) {
+          nameSplit[i] = subtypes.join(" ");
+        }
+      }
+    }
+    nameSplit = nameSplit.join(" ").split(/[ _]+/);
+    // remove duplicate words, keeping the last instance
+    nameSplit = nameSplit.filter(function(item, pos) {
+      return nameSplit.lastIndexOf(item) === pos;
+    });
+    name = nameSplit.join(" ");
+    name = formatName(name);
+    if (name.trim().length === 0) {
+      name = "Mostly Nothing";
+    }
+
+    return name;
+  }
+
+  currentDialog = null;
+  function showDialog(text) {
+    hideDialog();
+    var dialogBox = document.getElementById('dialogBox');
+    var dialogContent = document.getElementById('dialogContent');
+    dialogContent.innerHTML = text;
+    dialogBox.style.display = 'block';
+    currentDialog = 'dialogBox';
+    controlState.inMenu = true;
+  }
+  function hideDialog() {
+    if (!currentDialog) { return }
+    var dialogBox = document.getElementById(currentDialog);
+    dialogBox.style.display = 'none';
+    currentDialog = null;
+    controlState.inMenu = false;
+  }
+  imageGenCanvas = document.createElement('canvas');
+  imageGenCanvas.width = 290;
+  imageGenCanvas.height = 225;
+  var shareMessages = [
+    "I made DISHNAME in Infinite Chef!",
+    "I just served DISHNAME in Infinite Chef!",
+    "They let me cook and I made DISHNAME (Infinite Chef)",
+    "It's giving... DISHNAME (Infinite Chef)",
+    "97 year old diner still serves DISHNAME the old-fashioned way (Infinite Chef)",
+    "Dinner is served, and it's DISHNAME (Infinite Chef)",
+    "Thanksgiving leftovers go crazy - DISHNAME (Infinite Chef)",
+    "Every morning I wake up and eat DISHNAME (Infinite Chef)",
+    "Don't have DISHNAME at 3 AM (Infinite Chef)",
+    "Oops! All DISHNAME (Infinite Chef)",
+    "One DISHNAME, coming right up! (Infinite Chef)",
+    "Hi hungry, I'm DISHNAME (Infinite Chef)",
+    "Therapist: DISHNAME is not real. Infinite Chef:",
+    "Who else's mom made DISHNAME as a kid? (Infinite Chef)",
+    "We're not friends if you didn't have DISHNAME growing up (Infinite Chef)",
+    "Never let me cook DISHNAME again... (Infinite Chef)",
+    "All I want for Christmas is DISHNAME (Infinite Chef)",
+    "I physically cannot stop making DISHNAME in Infinite Chef",
+    "I'm literally overflowing with DISHNAME in Infinite Chef",
+    "I skipped all my classes to make DISHNAME in Infinite Chef",
+    "Call me Walter White the way I've been cooking DISHNAME in Infinite Chef",
+    "Gordon Ramsay approves of my DISHNAME (Infinite Chef)",
+    "Her: You better not be making DISHNAME when I get home\nMe in Infinite Chef:",
+    "DISHNAME, just like grandma used to make (Infinite Chef)",
+    "I make-a da DISHNAME (Infinite Chef)",
+    "Did I just make the DISHNAME of the Summer? (Infinite Chef)",
+  ];
+  function serveDish() {
+    drawCanvas(undefined,true);
+    hideDialog();
+    var dialogBox = document.getElementById('serveBox');
+    var dialogContent = document.getElementById('serveContent');
+    var ctx = imageGenCanvas.getContext('2d');
+    ctx.clearRect(0, 0, imageGenCanvas.width, imageGenCanvas.height);
+    // copy gameCanvas image, centered and cropped
+    var gameCanvas = document.getElementById('gameCanvas');
+    imageGenCanvas.width = gameCanvas.width;
+    imageGenCanvas.height = gameCanvas.height;
+    var ctx = imageGenCanvas.getContext('2d');
+    // set to pixelated rendering
+    ctx.webkitImageSmoothingEnabled = false;
+    ctx.mozImageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = false;
+    // load background.png
+    var bg = loadImage('background.png');
+
+    var dishName = generateDishName();
+    document.getElementById("dishName").innerText = dishName;
+    var url = "https://R74n.com/cook/?utm=social";
+    var hashtag = "#InfiniteChef";
+    var shareMessage = choose(shareMessages).replaceAll("DISHNAME", dishName);
+    document.getElementById("shareTwitter").href = "https://twitter.com/intent/tweet?original_referer=https://r74n.com/cook/&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&related=R74nCom&text="+encodeURIComponent(shareMessage.toLowerCase().replace(/\(?infinite chef\)?/g, hashtag))+"&url="+encodeURIComponent(url);
+    document.getElementById("shareReddit").href = "https://reddit.com/r/74n/submit?url="+encodeURIComponent(url)+"&title="+encodeURIComponent(shareMessage);
+    document.getElementById("shareEmail").href = "mailto:enter address here?subject=Check%20out%20my%20dish%20in%20Infinite%20Chef!&body="+encodeURIComponent(shareMessage)+"%0A%0ACreate%20your%20own%20dish%20here%20with%20hundreds%20of%20ingredients%3A%20"+encodeURIComponent(url);
+    document.getElementById("shareClipboard").href = "#";
+    document.getElementById("shareClipboard").onclick = function() {
+      navigator.clipboard.writeText(shareMessage.replaceAll("Infinite Chef", hashtag)+"  \n\n"+url);
+      this.children[0].src = "../shapes/png/share-buttons/success.png";
+      setTimeout(function() {
+        document.getElementById("shareClipboard").children[0].src = "../shapes/png/share-buttons/clipboard-copy.png";
+      }, 3000);
+      return false;
+    }
+
+    // draw background.png
+    var maxDimension = Math.max(imageGenCanvas.width, imageGenCanvas.height);
+    ctx.drawImage(bg, 0, 0, maxDimension, maxDimension);
+    ctx.drawImage(gameCanvas, 0, 0, gameCanvas.width, gameCanvas.height);
+    var img = imageGenCanvas.toDataURL();
+    document.getElementById("dishImage").src = img;
+    dialogBox.style.display = 'block';
+    currentDialog = 'serveBox';
+    controlState.inMenu = true;
+  }
+
+  function showSettings() {
+    if (currentDialog === "settingsBox") {
+      hideDialog();
+      return;
+    }
+    hideDialog();
+    var dialogBox = document.getElementById('settingsBox');
+    dialogBox.style.display = 'block';
+    currentDialog = 'settingsBox';
+    controlState.inMenu = true;
+  }
+  // get InfiniteChef-Mods from localStorage
+  var enabledMods = localStorage.getItem("InfiniteChef-Mods");
+  if (!enabledMods) {
+    enabledMods = [];
+  }
+  else {
+    enabledMods = JSON.parse(enabledMods);
+    enabledMods.forEach(function(js) {
+      initMod(js);
+    });
+  }
+  if (enabledMods.length === 0) {
+    document.getElementById("modList").innerHTML = "None enabled.";
+  }
+  function saveMods() {
+    localStorage.setItem("InfiniteChef-Mods", JSON.stringify(enabledMods));
+  }
+  function addMod(js) {
+    if (!js.startsWith("http")) {
+      js = "https://r74ncom.github.io/InfiniteChef-Mods/"+js;
+    }
+    document.getElementById("addModText").value = "";
+    if (enabledMods.indexOf(js) !== -1) {
+      return;
+    }
+    if (js.toLowerCase().startsWith("https://r74ncom.github.io") || confirm("Are you sure you trust "+js+" to run any scripts?")) {
+      if (enabledMods.length === 0) {
+        document.getElementById("modList").innerHTML = "";
+      }
+      initMod(js);
+      enabledMods.push(js);
+      saveMods();
+    }
+  }
+  function initMod(js) {
+    var script = document.createElement('script');
+    script.src = js;
+    document.head.appendChild(script);
+    var name = js.split("/").pop();
+    document.getElementById("modList").insertAdjacentHTML('beforeend', "<div>"+name+" <img src=\"dialog_x.png\" onclick=\"removeMod('"+js+"'); this.parentElement.remove();\"></div>");
+  }
+  function removeMod(js) {
+    enabledMods.splice(enabledMods.indexOf(js), 1);
+    saveMods();
+  }
+
+  function turnOn(option) {
+    var button = document.getElementById("button-"+option);
+    if (button) button.setAttribute("on", "true");
+    viewData[currentView][option] = true;
+    if (option === "tempIncrease") turnOff("tempDecrease");
+    else if (option === "tempDecrease") turnOff("tempIncrease");
+  }
+  function turnOff(option) {
+    var button = document.getElementById("button-"+option);
+    if (button) button.removeAttribute("on");
+    viewData[currentView][option] = false;
+  }
+  function toggle(option) {
+    var button = document.getElementById("button-"+option);
+    if (button.getAttribute("on") === "true") turnOff(option);
+    else turnOn(option);
+  }
+  function selectTool(tool) {
+    if (!tool || toolData[tool].func || toolData[tool].whileOn) {
+      currentToolR = 0;
+      if (currentTool) {
+        var button = document.getElementById("button-"+currentTool);
+        if (button) button.removeAttribute("on");
+        if (toolData[currentTool].onDeselect) toolData[currentTool].onDeselect(currentTool);
+      }
+      if (tool === currentTool) {
+        currentTool = null;
+        return;
+      }
+      if (tool !== null) {
+        selectIngredient(null);
+      }
+      var button = document.getElementById("button-"+tool);
+      if (button) button.setAttribute("on", "true");
+      currentTool = tool;
+    }
+    if (tool && toolData[tool].onSelect) toolData[tool].onSelect(tool);
+  }
+  toolData = {
+    blend: {
+      func: (placed) => {
+        var done = placed.done;
+        var origColor = [placed.h,placed.s,placed.l];
+        var orig = placed.id;
+        var broken = ingredientAttr(placed.id, "broken");
+        var brokenShape = ingredientAttr(placed.id, "brokenShape");
+        if (broken) {
+          changeIngredient(placed,choose(broken),true);
+        }
+        else if (brokenShape) {
+          placed.shape = choose(brokenShape);
+          updateSize(placed)
+        }
+        var innerColor = ingredientAttr(orig, "innerColor");
+        if (innerColor) {
+          var hsl = hexToHsl(choose(innerColor));
+          colorIngredient(placed,hsl[0]*360,hsl[1]*100,hsl[2]*100);
+        }
+        else if (!ingredients[orig].broken) {
+          colorIngredient(placed,origColor[0],origColor[1],origColor[2]);
+        }
+        if (done) placed.vy = -3;
+        uncontainAll();
+      },
+      img: "blend.png",
+      spin: true
+    },
+    tongs: {
+      func: (placed) => {
+        if (!dragging) {
+          dragging = placed;
+          // move each in placed array to top of viewData[currentView].total
+          placed.forEach((a) => {
+            viewData[currentView].total.splice(viewData[currentView].total.indexOf(a),1);
+            viewData[currentView].total.push(a);
+            if (viewInfo[currentView].holdsLiquid && a.hide && (ingredientAttr(a.id, "behavior") === 1 || ingredientAttr(a.id, "dissolve") || a.pseudo)) {
+              removeLiquid(a.h, a.s, a.l);
+              a.hide = false;
+            }
+          });
+          uncontainAll();
+        }
+      },
+      whileOn: () => {
+        if (dragging) {
+          dragging.forEach((placed) => {
+            placed.done = false;
+            placed.done2 = false;
+            placed.vx = 0;
+            placed.vy = 0;
+            placed.x = mousePos.x;
+            placed.y = mousePos.y;
+            placed.noDelete = true;
+          })
+          if (mousePos.x > canvas.width) { // move to another view
+            var elements = document.querySelectorAll('#controlsBar button');
+            for (var i = 0; i < elements.length; i++) {
+              var element = elements[i];
+              if (element.matches(':hover')) {
+                  var view = element.id.split("-")[1];
+                  if (viewInfo[view] && currentView !== view) {
+                    var oldView = currentView;
+                    changeView(view);
+                    dragging.forEach((placed) => {
+                      viewData[oldView].total.splice(viewData[oldView].total.indexOf(placed),1);
+                      viewData[view].total.push(placed);
+                    })
+                  }
+              }
+            }
+          }
+        }
+      },
+      onClick: () => {
+        currentToolR = 10;
+      },
+      onMouseUp: () => {
+        if (dragging) {
+          dragging.forEach((placed) => {
+            placed.vx = mousePos.speedX;
+            placed.vy = mousePos.speedY;
+            placed.noDelete = false;
+          })
+        }
+        currentToolR = 0;
+        dragging = null;
+      },
+      onDeselect: () => {
+        dragging = null;
+      },
+      img: "tongs.png",
+      target: "many",
+      offsetX: 0.5,
+      offsetY: -0.5
+    },
+    whisk: {
+      func: (placed) => {
+        var toMix = placed.slice();
+        uncontainAll();
+        placed.forEach((a) => {
+          if (Math.abs(a.x - mousePos.x) < 5) a.vx = 0;
+          else if (a.x+40 > rightBound) a.vx = -3;
+          else if (a.x-40 < leftBound) a.vx = 3;
+          else if (a.x > mousePos.x) a.vx = 3;
+          else if (a.x < mousePos.x) a.vx = -3;
+          a.vy = -3;
+          var whipped = ingredientAttr(a.id, "whipped");
+          if (whipped) changeIngredient(a,choose(whipped));
+        });
+        while (toMix.length > 1) {
+          var a = choose(toMix);
+          var b = choose(toMix);
+          if (Math.random() < 0.33) {
+            var temp = a.x;
+            a.x = b.x;
+            b.x = temp;
+            temp = a.y;
+            a.y = b.y;
+            b.y = temp;
+          }
+          toMix.splice(toMix.indexOf(a), 1);
+          toMix.splice(toMix.indexOf(b), 1);
+        }
+      },
+      img: "whisk.png",
+      target: "many",
+      sway: true,
+      offsetX: 0.5,
+      offsetY: -0.5
+    }
+  }
+  dragging = null;
+  function addTool(name,data) {
+    var oldButton = document.getElementById("button-"+name);
+    if (oldButton) oldButton.remove();
+    if (!data.shape && !data.img) {
+      data.shape = "rhombus"
+    }
+    if (data.shape) {
+      data.img = "../shapes/png/"+data.shape+".png";
+      if (data.color) {
+        var hsl = hexToHsl(data.color);
+        data.h = hsl[0]*360; data.s = hsl[1]*100; data.l = hsl[2]*100;
+        var image = colorizeStandard(data.img, data.h, data.s, data.l);
+        if (image.loaded) {
+          data.img = image.src;
+        }
+        else {
+          image.addEventListener("load", function() {
+            document.getElementById("toolImg-"+name).src = colorizeStandard(data.img, data.h, data.s, data.l).src;
+          })
+        }
+      }
+    }
+    toolData[name] = data;
+    if (!data.hidden) {
+      var prepControls = document.getElementById("prepControls");
+      prepControls.insertAdjacentHTML('beforeend', "<button id=\"button-"+name+"\" onclick=\"selectTool('"+name+"')\" title=\""+formatName(name)+"\"><img src=\""+data.img+"\" class=\"pixelart\" id=\"toolImg-"+name+"\"></button>");
+    }
+  }
+  for (var key in toolData) {
+    addTool(key,toolData[key]);
+  }
+  function updateStats() {
+    var statText = "";
+    var statBar = document.getElementById("statBar");
+    var view = viewData[currentView];
+    if (view.tempIncrease || view.tempDecrease || Math.abs(view.temp-20) > 10) {
+      statText += formatTemp(view.temp);
+    }
+    statBar.innerText = statText;
+  }
+
+  var lastPlacedGas = 0;
+  function tempCheck() {
+    var view = viewData[currentView];
+    view.temp = Math.min(300, Math.max(-30, view.temp));
+    // loop through view.total
+    if (view.temp > 50) { // Cooking
+      for (var i = 0; i < view.total.length; i++) {
+        var ingredient = view.total[i];
+        if ((!ingredient.done && !ingredient.done2) || ingredient.cook >= 1) continue;
+        var cookColor = ingredientAttr(ingredient.id, "cookColor");
+        if (cookColor && ticks % 5 === 0) {
+          var rgb1 = hslToRgb(ingredient.h/360, ingredient.s/100, ingredient.l/100);
+          var rgb2 = hslToRgb(cookColor[0]/360, cookColor[1]/100, cookColor[2]/100);
+          // get 1% closer to cookColor
+          var r = rgb1[0] + (rgb2[0] - rgb1[0]) * 0.01;
+          var g = rgb1[1] + (rgb2[1] - rgb1[1]) * 0.01;
+          var b = rgb1[2] + (rgb2[2] - rgb1[2]) * 0.01;
+          var hsl = rgbToHsl(r, g, b);
+          ingredient.h = hsl[0] * 360;
+          ingredient.s = hsl[1] * 100;
+          ingredient.l = hsl[2] * 100;
+          ingredient.cook = (ingredient.cook ?? 0) + 0.005;
+        }
+        if (ingredientAttr(ingredient.id, "tempReact")) {
+          checkReactions(ingredient);
+        }
+      }
+    }
+    for (var i = 0; i < view.total.length; i++) { // State Changes
+      var ingredient = view.total[i];
+      // if (ingredient.hide) continue;
+      if ((!ingredient.done && !ingredient.done2) || ingredient.pseudo || Math.random() > 0.1) continue;
+      var meltPoint = ingredientAttr(ingredient.id, "meltPoint");
+      if (view.temp >= meltPoint) {
+        var meltInto = choose(ingredientAttr(ingredient.id, "meltInto"));
+        viewData[currentView].liquidSolid = false;
+        if (meltInto) {
+          var oldColor = [ingredient.h, ingredient.s, ingredient.l];
+          changeIngredient(ingredient, meltInto);
+          if (!viewInfo[currentView].holdsLiquid) {
+            ingredient.h = oldColor[0];
+            ingredient.s = oldColor[1];
+            ingredient.l = oldColor[2];
+          }
+        }
+        else if (viewInfo[currentView].holdsLiquid) {
+          addLiquid(ingredient.h, ingredient.s, ingredient.l);
+          ingredient.pseudo = true;
+          ingredient.done2 = true;
+          ingredient.done = true;
+          ingredient.hide = true;
+          uncontainAll();
+        }
+        else {
+          ingredient.shape = "liquid_splat";
+          ingredient.pseudo = true;
+          uncontainAll();
+        }
+        continue;
+      }
+      var boilPoint = ingredientAttr(ingredient.id, "boilPoint");
+      if (boilPoint !== undefined) {
+        var boilInto = choose(ingredientAttr(ingredient.id, "boilInto")) || "gas";
+        if (view.temp >= boilPoint) {
+          deleteIngredient(ingredient);
+        }
+        var boiledBehavior = ingredientAttr(boilInto, "behavior");
+        if (ticks-lastPlacedGas >= 10 && view.temp >= boilPoint-30 && (view.temp >= boilPoint || (Math.random() < 0.25 && boiledBehavior === 3))) {
+          // x = random number between leftBound and rightBound
+          var x = Math.random() * (rightBound - leftBound) + leftBound;
+          placeIngredient(boilInto, x, hitLine-50);
+          lastPlacedGas = ticks;
+          continue;
+        }
+      }
+      var freezePoint = ingredientAttr(ingredient.id, "freezePoint");
+      if (view.temp <= freezePoint) {
+        var freezeInto = choose(ingredientAttr(ingredient.id, "freezeInto"));
+        if (freezeInto) {
+          changeIngredient(ingredient, freezeInto);
+          continue;
+        }
+      }
+    }
+  }
+
+  changeView('bowl');
+  refreshCanvas();
+  // window.addEventListener('resize', refreshCanvas);
+
+  window.addEventListener('load', function(){
+    document.getElementById('loadingScreen').style.display = 'none';
+    document.getElementById('mainDiv').style.display = 'flex';
+    document.getElementById('rightDiv').style.display = 'flex';
+    var gameCanvas = document.getElementById('gameCanvas');
+    var rightDiv = document.getElementById('rightDiv');
+    var prepBar = document.getElementById('prepBar');
+    var prepText = document.getElementById('prepText');
+    var searchResults = document.getElementById('searchResultsDiv');
+    var dialogBox = document.getElementById('dialogBox');
+    var serveBox = document.getElementById('serveBox');
+
+    // Event Listeners
+    hideSearchResults = () => {
+      document.getElementById('searchResultsDiv').style.display = 'none';
+      controlState.inMenu=false;
+      if (currentIngredient) { prepText.value = formatName(currentIngredient); }
+    }
+    showSearchResults = () => {document.getElementById('searchResultsDiv').style.display = 'block'; ; controlState.inMenu=true}
+    prepText.addEventListener('focus', function(e) {
+      if (document.getElementById('searchResults').innerHTML) { showSearchResults(); }
+      this.value = "";
+    });
+    prepText.addEventListener('mousedown', function(e) {
+      if (this.value === "") searchIngredients(this.value);
+    });
+    prepText.addEventListener('input', function(e) {
+      if (this.value === "/") { this.value = "" }
+      if (this.value.length === 0) { return }
+      document.getElementById('searchResults').innerHTML = "Searching... :)";
+      showSearchResults();
+      // timeout to prevent spamming
+      if (searchTimeout) { clearTimeout(searchTimeout); }
+      searchTimeout = setTimeout(function() {
+        searchIngredients(prepText.value);
+      }, 250);
+    });
+    prepText.addEventListener('keyup', function(e) {
+      if (this.value.length === 0) {
+        selectIngredient(null);
+        searchIngredients("");
+      }
+      // enter key
+      else if (e.keyCode == 13) {
+        var searchResults = document.getElementById('searchResults');
+        if (searchResults.innerHTML.length) {
+          if (searchResults.children[0]) {
+            searchResults.children[0].click();
+            prepText.blur();
+            gameCanvas.focus();
+          }
+        }
+      }
+    });
+    prepBar.addEventListener('click', function(e) {
+      e.stopPropagation();
+      hideDialog();
+    });
+    document.body.addEventListener('click', function(e){
+      hideSearchResults();
+      if (currentDialog) {
+        controlState.inMenu = true;
+      }
+    });
+    window.addEventListener('keydown', function(e) {
+      // console.log(e.keyCode)
+      if ((e.metaKey || e.ctrlKey) && e.keyCode !== 8) { return; }
+      if (e.keyCode === 16) { controlState.shift = true; }
+      // escape
+      else if (e.keyCode === 27) {
+        if (controlState.inMenu) {
+          hideDialog();
+          hideSearchResults();
+          prepText.blur();
+          gameCanvas.focus();
+        }
+        else {
+          selectIngredient(null);
+        }
+      }
+      else if (currentDialog || controlState.inMenu) { return }
+      // left arrow key
+      else if (e.keyCode === 37) {
+        var viewButton = document.getElementById("button-"+currentView);
+        if (viewButton) {
+          var prevButton = viewButton.previousElementSibling;
+          if (prevButton) {
+            var view = prevButton.id.split("-")[1];
+            if (viewData[view] || viewInfo[view]) {
+              changeView(view);
+            }
+          }
+        }
+      }
+      // right arrow key
+      else if (e.keyCode === 39 && !controlState.inMenu) {
+        var viewButton = document.getElementById("button-"+currentView);
+        if (viewButton) {
+          var nextButton = viewButton.nextElementSibling;
+          if (nextButton) {
+            var view = nextButton.id.split("-")[1];
+            if (viewData[view] || viewInfo[view]) {
+              changeView(view);
+            }
+          }
+        }
+      }
+      // enter
+      else if (e.keyCode === 13) {
+        if (!controlState.inMenu) {
+          serveDish();
+        }
+        else if (currentDialog === 'serveBox') {
+          hideDialog();
+        }
+      }
+      // if key is between a-z, 0-9, or space, backspace, focus on prepText
+      else if ((e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 48 && e.keyCode <= 57) || e.keyCode == 32 || e.keyCode == 8) {
+        prepText.focus();
+      }
+      // / = focus on prepText
+      else if (e.keyCode === 191) {
+        prepText.focus();
+        e.preventDefault();
+      }
+      // ; and ' = rotate ingredient
+      else if (e.keyCode === 186 || e.keyCode === 59) {
+        currentIngredientProps.r = (currentIngredientProps.r||0) - (controlState.shift ? 1 : 45);
+        e.preventDefault();
+      }
+      else if (e.keyCode === 222) {
+        currentIngredientProps.r = (currentIngredientProps.r||0) + (controlState.shift ? 1 : 45);
+        e.preventDefault();
+      }
+    });
+    window.addEventListener('keyup', function(e) {
+      if (e.keyCode == 16) { controlState.shift = false; }
+    });
+    window.addEventListener('blur', function(e) {
+      controlState.shift = false;
+      controlState.mouse = false;
+    });
+    function updateMouse(e) {
+      // get mouse position on canvas
+      var rect = gameCanvas.getBoundingClientRect();
+      mousePos = {
+        x: Math.round(e.clientX - rect.left),
+        y: Math.round(e.clientY - rect.top),
+        speedX: -Math.round(mousePos.x - (e.clientX - rect.left)),
+        speedY: -Math.round(mousePos.y - (e.clientY - rect.top))
+      }
+    }
+    window.addEventListener('mousemove', function(e) {
+      // get mouse position on canvas
+      updateMouse(e);
+      // if (controlState.mouse === 0) {
+      //   if (currentIngredient) {
+      //     placeIngredient(currentIngredient, mousePos.x, mousePos.y);
+      //   }
+      // }
+    });
+    function mouseDown(e) {
+      e.preventDefault()
+      if (controlState.inMenu) {
+        hideDialog();
+        prepText.blur();
+        hideSearchResults();
+        return;
+      }
+      if (controlState.mouse === 0 || e.touches) {
+        if (currentIngredient) {
+          var onMouseDown = ingredientAttr(currentIngredient, "onMouseDown");
+          if (onMouseDown) onMouseDown(currentIngredient);
+          var placed = placeIngredient(currentIngredientProps.id||currentIngredient, mousePos.x, mousePos.y);
+          for (var key in currentIngredientProps) {
+            placed[key] = choose(currentIngredientProps[key]);
+          }
+        }
+        else if (currentTool) {
+          if (toolData[currentTool].func) useTool();
+          if (toolData[currentTool].onClick) toolData[currentTool].onClick(mousePos.x, mousePos.y);
+        }
+      }
+      else if (controlState.mouse) {
+        if (controlState.mouse === 2 && (currentIngredient || currentTool)) {
+          selectIngredient(null);
+          selectTool(null);
+        }
+        else {
+          var found = ingredientsAt(mousePos.x, mousePos.y);
+          var ingredient = found[found.length-1];
+          if (ingredient) {
+            if (controlState.mouse === 1) selectIngredient(ingredient.id);
+            else if (controlState.mouse === 2) {
+              deleteIngredient(ingredient);
+              uncontainAll();
+            }
+          }
+        }
+      }
+      if (controlState.shift) {
+        console.log(mousePos.x/canvas.width,mousePos.y/canvas.height);
+        console.log(ingredientsAt(mousePos.x, mousePos.y));
+      }
+    }
+    gameCanvas.addEventListener('mousedown', function(e) {
+      updateMouse(e);
+      controlState.mouse = e.button;
+      mouseDown(e);
+    });
+    gameCanvas.addEventListener('mouseup', function(e) {
+      controlState.mouse = false;
+    });
+    window.addEventListener('mouseup', function(e) {
+      if (currentTool && toolData[currentTool].onMouseUp) {
+        toolData[currentTool].onMouseUp();
+      }
+      controlState.mouse = false;
+    });
+    window.addEventListener('touchend', function(e) {
+      if (currentTool && toolData[currentTool].onMouseUp) {
+        toolData[currentTool].onMouseUp();
+      }
+      controlState.mouse = false;
+      controlState.mobile = true;
+    });
+    gameCanvas.addEventListener('touchstart', function(e) {
+      controlState.mobile = true;
+      if (e.pageX < 10 || e.pageX > window.innerWidth - 10) return;
+      e.preventDefault();
+      controlState.mouse = 0;
+      if (e.touches[0]) updateMouse(e.touches[0]);
+      mouseDown(e)
+    }, {passive: false});
+    gameCanvas.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+      if (e.touches[0]) updateMouse(e.touches[0]);
+    }, {passive: false});
+    gameCanvas.addEventListener('touchend', function(e) { e.preventDefault(); });
+    gameCanvas.addEventListener('touchcancel', function(e) {
+      controlState.mouse = false;
+      e.preventDefault();
+    });
+    gameCanvas.oncontextmenu = function(e) { e.preventDefault(); e.stopPropagation(); return false }
+
+    // Initialization
+    for (var key in ingredients) {
+      finalizeIngredient(key);
+    }
+    recipeMap = {};
+    // sort dishRecipes by amount of "+" in key, with the most first
+    var sortedKeys = Object.keys(dishRecipes)
+    for (var i = 0; i < sortedKeys.length; i++) {
+      recipeMap[sortedKeys[i]] = sortedKeys[i].split("+");
+      // if the first element starts with "&", split by ":"
+      if (recipeMap[sortedKeys[i]][0].charCodeAt(0) === 38) {
+        var split = recipeMap[sortedKeys[i]][0].split(":");
+        recipeMap[sortedKeys[i]][0] = split[1];
+      }
+      var modifier = recipeMap[sortedKeys[i]][0].charCodeAt(0);
+      // if starts with = or ~, remove the character
+      if (modifier === 61 || modifier === 126) {
+        recipeMap[sortedKeys[i]][0] = recipeMap[sortedKeys[i]][0].substring(1);
+      }
+    }
+    sortRecipes();
+    // sort ingredients by length, then alphabetically
+    var sortedIngredients = Object.keys(ingredients).sort(function(a, b) {
+      if (a.length === b.length) {
+        return a.localeCompare(b);
+      }
+      return a.length - b.length;
+    });
+    var newIngredients = {};
+    for (var i = 0; i < sortedIngredients.length; i++) {
+      newIngredients[sortedIngredients[i]] = ingredients[sortedIngredients[i]];
+    }
+    ingredients = newIngredients;
+    refreshCanvas();
+    gameLoop = setInterval(tick, 1000 / fps);
+  });
+</script>
+
+<div id="textualContent">
+  <h2>About Infinite Chef</h2>
+  <p><dfn>Infinite Chef</dfn> is a cooking simulator that can be played in your browser. With a sophisticated <strong>dish name generator</strong> that can accept any of <strong>hundreds of ingredients</strong>, Infinite Chef is the <strong>ultimate virtual kitchen</strong>.</p>
+
+  <div id="imageGallery">
+    <img src="screenshots/critter-soup.webp" alt="Many critters in a pot of soup.">
+    <img src="screenshots/flooded-burger.webp" alt="Hamburger with way too much sauce.">
+    <img src="screenshots/fruit-blending.webp" alt="Using the Blend tool on a bunch of fruits.">
+  </div>
+  <style>
+    /* flex box where the images are the same width and can change depending on screen size */
+    #imageGallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #imageGallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5em;
+    }
+    /* make it horizontally scrollable instead on mobile */
+    @media (max-width: 800px) {
+      #imageGallery {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: left;
+      }
+    }
+  </style>
+
+  <p>Select an ingredient by using the search bar located above your workstation! Type in a query, and press one of the results. Then, simply tap in the kitchen to drop it in!</p>
+
+  <p>Missing something? Send it to our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXx1NWgGz_VJ-796FsmawOzHF1MzAZevCVXFHXtQymWj3ysA/viewform" target="_blank">Feedback Form</a> or email us at <a href="mailto:contact@R74n.com" target="_blank">contact@R74n.com</a>! You can also join the culinary community on <a href="https://discord.gg/ejUc6YPQuS" target="_blank">Discord</a>, or the fan-made <a href="https://www.reddit.com/r/infinitechef/">subreddit</a>.</p>
+
+  <p>Infinite Chef is made by <a href="https://R74n.com/">R74n</a>, the developer of <a href="https://sandboxels.R74n.com/">Sandboxels</a>.</p>
+
+  <p style="text-align:center"><a href="https://R74n.com/"><img src="https://R74n.com/icons/favicon.svg" style="height:1em;vertical-align:top;"></a> • <a href="changelog.txt">Changelog</a> • <a href="../license.txt">License</a> • <a href="../privacy">Privacy</a></p>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+<!-- i like having this but ublock blocks these things anyway -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93720349-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93720349-6');
+</script>
+
+</body>
+</html>
