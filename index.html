@@ -1,195 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Blackout</title>
-<style>
-  /* Style for the loading screen */
-  body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackout</title>
+    <h1>Blackout</h1>
+    <script>
+        function checkCode() {
+            const userInput = document.getElementById('codeInput').value;
+            const correctCode = 'D0tlyH!y0u';
 
-  .logo {
-    width: 100px;
-    height: 100px;
-    animation: fadeOut 3s forwards;
-  }
-
-
-        @keyframes fadeOut {
-          0% { opacity: 1; }
-          100% { opacity: 0; }
+            if (userInput === correctCode) {
+                window.location.href = 'start.html'; // Redirect to start.html
+            } else {
+                alert('Incorrect code. Please try again.');
+            }
         }
-
-    .text {
-      font-family: "Poppins", sans-serif;
-      font-weight: 600;
-      font-style: normal;
-      margin-top: 10px;
-      font-size: 24px;
-      opacity: 1; /* Set initial opacity to 1 */
-    color:white;
-    animation: fadeOut 3s forwards;
-    }
-      </style>
+    </script>
 </head>
 <body>
-<div class="text">Blackout</div>
-
-<script>
-  window.onload = function() {
-    setTimeout(function() {
-      window.location.href = "start.html"; // Replace with your desired URL
-    }, 3000); // 3000 milliseconds = 3 seconds
-  };
-</script>
-</head>
-<body>
+    <h1>Enter the Code</h1>
+    <input type="text" id="codeInput" placeholder="Type the code here">
+    <button onclick="checkCode()">Submit</button>
 </body>
 </html>
-<div class="dust-particle"></div></body>
-<style>
-  body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: black;
-  }
-  #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-  }
-</style>
-</head>
-<body>
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  particlesJS('particles-js', {
-      "particles": {
-          "number": {
-              "value": 160,
-              "density": {
-                  "enable": true,
-                  "value_area": 800
-              }
-          },
-          "color": {
-              "value": "#ffffff"
-          },
-          "shape": {
-              "type": "circle",
-              "stroke": {
-                  "width": 0,
-                  "color": "#000000"
-              },
-              "polygon": {
-                  "nb_sides": 5
-              },
-              "image": {
-                  "src": "img/github.svg",
-                  "width": 100,
-                  "height": 100
-              }
-          },
-          "opacity": {
-              "value": 1,
-              "random": true,
-              "anim": {
-                  "enable": true,
-                  "speed": 1,
-                  "opacity_min": 0,
-                  "sync": false
-              }
-          },
-          "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                  "enable": false,
-                  "speed": 4,
-                  "size_min": 0.3,
-                  "sync": false
-              }
-          },
-          "line_linked": {
-              "enable": false,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-          },
-          "move": {
-              "enable": true,
-              "speed": 1,
-              "direction": "none",
-              "random": true,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                  "enable": false,
-                  "rotateX": 600,
-                  "rotateY": 600
-              }
-          }
-      },
-      "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-              "onhover": {
-                  "enable": true,
-                  "mode": "bubble"
-              },
-              "onclick": {
-                  "enable": true,
-                  "mode": "repulse"
-              },
-              "resize": true
-          },
-          "modes": {
-              "grab": {
-                  "distance": 400,
-                  "line_linked": {
-                      "opacity": 1
-                  }
-              },
-              "bubble": {
-                  "distance": 250,
-                  "size": 0,
-                  "duration": 2,
-                  "opacity": 0,
-                  "speed": 3
-              },
-              "repulse": {
-                  "distance": 400,
-                  "duration": 0.4
-              },
-              "push": {
-                  "particles_nb": 4
-              },
-              "remove": {
-                  "particles_nb": 2
-              }
-          }
-      },
-      "retina_detect": true
-  });
-</script>
-</body>
-</html>
+
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
