@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <a class="btn">Start</a>
+    
+  <div class="navbar">
+<img src="https://t9os.pages.dev/games.png" class="game">    
+<img src="image.png" class="game2">    
+
+
+    </div>
+    
+    <style>
+        .navbar {
+            position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 600px;
+  background-color: #970b0a; 
+  border-radius:2px;
+  gap:30px; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    bottom:0px;
+    left:0;
+    opacity: 50%;
+    border-radius:50px;
+        }
+        .navbar2 {
+            position: fixed;
+  top: 0;
+  right: 0;
+  width: 1270px;
+  height: 60px;
+  background-color: #970b0a; 
+  border-radius:2px;
+  gap:30px; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    bottom:0px;
+        }
+        .game{
+          width:50px;
+          padding:10px 20px;
+          border-radius:20px;
+        }
+        .game:hover{
+          background-color:red;
+        }
+        .game2{
+          width:50px;
+          padding:10px 20px;
+          border-radius:20px;
+          bottom: 150px;
+          position:fixed;
+          transition: background-color 0.3s ease-in-out;
+
+        }
+        .game2:hover{
+          background-color:red;
+        }
+        body{
+          background-color:black;
+          font-family: sans-serif;
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+        }
+        .btn{
+          background-color:#970b0a;
+          color:white;
+          border-radius:10px;
+          padding:10px 20px;
+          right:45%;
+          top:50%;
+          position:fixed;
+          font-family:sans-serif;
+          width:100px;
+          height:50px;
+          font-size:45px;
+          opacity:75%;
+
+
+        }
+        .head {
+                color:white;
+                text-align:center;
+                top:85px;
+                right:37%;
+                position:fixed;
+                font-size:87px;
+        }
+        </style> 
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+          // Get the select element
+          var select = document.getElementById("background-select");
+        
+          // Set initial background image based on stored preference or default
+          var selectedBackground = localStorage.getItem("selectedBackground");
+          
+          if (selectedBackground) {
+            document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+            select.value = selectedBackground;
+          }
+        
+           // Listen for changes in the select element
+           select.addEventListener("change", function() {
+             var newBackground = this.value;
+             document.body.style.backgroundImage = "url(" + newBackground + ")";
+             localStorage.setItem("selectedBackground", newBackground);
+           });
+        });
+        
+          </script>
+         
+              <h1  class="head">Blackout</h1>
+
+              <div class="dust-particle"></div></body>
+              <style>
+                #particles-js {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+              </style>
+
+<div id="particles-js"></div>
+<script>
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 160,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 1,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 4,
+                    "size_min": 0.3,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": false,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 600
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "bubble"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 250,
+                    "size": 0,
+                    "duration": 2,
+                    "opacity": 0,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 400,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+  </script>
+
+</body>
+</html>
