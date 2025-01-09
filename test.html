@@ -122,131 +122,193 @@
          
               <h1  class="head">Blackout</h1>
 
-              <div class="dust-particle"></div></body>
-              <style>
-                #particles-js {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                }
-              </style>
+ 
 
-<div id="particles-js"></div>
-<script>
-    particlesJS('particles-js', {
-        "particles": {
-            "number": {
-                "value": 160,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 1,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "opacity_min": 0,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 4,
-                    "size_min": 0.3,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 1,
-                "direction": "none",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 600
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "bubble"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 250,
-                    "size": 0,
-                    "duration": 2,
-                    "opacity": 0,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 400,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
-  </script>
+
+<!-- wp:cover {"overlayColor":"custom-dark-blue-2","className":"ticss-674e9f08","layout":{"type":"constrained"},"hasCustomCSS":true,"customCSS":".light {\n    position: absolute;\n    width: 0px;\n    opacity: .75;\n    background-color: white;\n    box-shadow: #e9f1f1 0px 0px 20px 2px;\n    opacity: 0;\n    top: 100vh;\n    bottom: 0px;\n    left: 0px;\n    right: 0px;\n    margin: auto;\n}\n\n.x1{\n  -webkit-animation: floatUp 4s infinite linear;\n  -moz-animation: floatUp 4s infinite linear;\n  -o-animation: floatUp 4s infinite linear;\n  animation: floatUp 4s infinite linear;\n   -webkit-transform: scale(1.0);\n   -moz-transform: scale(1.0);\n   -o-transform: scale(1.0);\n  transform: scale(1.0);\n}\n\n.x2{\n  -webkit-animation: floatUp 7s infinite linear;\n  -moz-animation: floatUp 7s infinite linear;\n  -o-animation: floatUp 7s infinite linear;\n  animation: floatUp 7s infinite linear;\n  -webkit-transform: scale(1.6);\n  -moz-transform: scale(1.6);\n  -o-transform: scale(1.6);\n  transform: scale(1.6);\n  left: 15%;\n}\n\n.x3{\n  -webkit-animation: floatUp 2.5s infinite linear;\n  -moz-animation: floatUp 2.5s infinite linear;\n  -o-animation: floatUp 2.5s infinite linear;\n  animation: floatUp 2.5s infinite linear;\n  -webkit-transform: scale(.5);\n  -moz-transform: scale(.5);\n  -o-transform: scale(.5);\n  transform: scale(.5);\n  left: -15%;\n}\n\n.x4{\n  -webkit-animation: floatUp 4.5s infinite linear;\n  -moz-animation: floatUp 4.5s infinite linear;\n  -o-animation: floatUp 4.5s infinite linear;\n  animation: floatUp 4.5s infinite linear;\n  -webkit-transform: scale(1.2);\n  -moz-transform: scale(1.2);\n  -o-transform: scale(1.2);\n  transform: scale(1.2);\n  left: -34%;\n}\n\n.x5{\n  -webkit-animation: floatUp 8s infinite linear;\n  -moz-animation: floatUp 8s infinite linear;\n  -o-animation: floatUp 8s infinite linear;\n  animation: floatUp 8s infinite linear;\n  -webkit-transform: scale(2.2);\n  -moz-transform: scale(2.2);\n  -o-transform: scale(2.2);\n  transform: scale(2.2);\n  left: -57%;\n}\n\n.x6{\n  -webkit-animation: floatUp 3s infinite linear;\n  -moz-animation: floatUp 3s infinite linear;\n  -o-animation: floatUp 3s infinite linear;\n  animation: floatUp 3s infinite linear;\n  -webkit-transform: scale(.8);\n  -moz-transform: scale(.8);\n  -o-transform: scale(.8);\n  transform: scale(.8);\n  left: -81%;\n}\n\n.x7{\n  -webkit-animation: floatUp 5.3s infinite linear;\n  -moz-animation: floatUp 5.3s infinite linear;\n  -o-animation: floatUp 5.3s infinite linear;\n  animation: floatUp 5.3s infinite linear;\n  -webkit-transform: scale(3.2);\n  -moz-transform: scale(3.2);\n  -o-transform: scale(3.2);\n  transform: scale(3.2);\n  left: 37%;\n}\n\n.x8{\n  -webkit-animation: floatUp 4.7s infinite linear;\n  -moz-animation: floatUp 4.7s infinite linear;\n  -o-animation: floatUp 4.7s infinite linear;\n  animation: floatUp 4.7s infinite linear;\n  -webkit-transform: scale(1.7);\n  -moz-transform: scale(1.7);\n  -o-transform: scale(1.7);\n  transform: scale(1.7);\n  left: 62%;\n}\n\n.x9{\n  -webkit-animation: floatUp 4.1s infinite linear;\n  -moz-animation: floatUp 4.1s infinite linear;\n  -o-animation: floatUp 4.1s infinite linear;\n  animation: floatUp 4.1s infinite linear;\n  -webkit-transform: scale(0.9);\n  -moz-transform: scale(0.9);\n  -o-transform: scale(0.9);\n  transform: scale(0.9);\n  left: 85%;\n}\n\nbutton:focus{\n  outline: none;\n}\n\n@-webkit-keyframes floatUp{\n  0%{top: 100vh; opacity: 0;}\n  25%{opacity: 1;}\n  50%{top: 0vh; opacity: .8;}\n  75%{opacity: 1;}\n  100%{top: -100vh; opacity: 0;}\n}\n@-moz-keyframes floatUp{\n  0%{top: 100vh; opacity: 0;}\n  25%{opacity: 1;}\n  50%{top: 0vh; opacity: .8;}\n  75%{opacity: 1;}\n  100%{top: -100vh; opacity: 0;}\n}\n@-o-keyframes floatUp{\n  0%{top: 100vh; opacity: 0;}\n  25%{opacity: 1;}\n  50%{top: 0vh; opacity: .8;}\n  75%{opacity: 1;}\n  100%{top: -100vh; opacity: 0;}\n}\n@keyframes floatUp{\n  0%{top: 100vh; opacity: 0;}\n  25%{opacity: 1;}\n  50%{top: 0vh; opacity: .8;}\n  75%{opacity: 1;}\n  100%{top: -100vh; opacity: 0;}\n}\n"} -->
+<div class="wp-block-cover ticss-674e9f08"><span aria-hidden="true" class="wp-block-cover__background has-custom-dark-blue-2-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">Fluid Up Background Particle Animation</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class='light x1'></div>
+  <div class='light x2'></div>
+  <div class='light x3'></div>
+  <div class='light x4'></div>
+  <div class='light x5'></div>
+  <div class='light x6'></div>
+  <div class='light x7'></div>
+  <div class='light x8'></div>
+  <div class='light x9'></div>
+<!-- /wp:html --></div></div>
+<!-- /wp:cover -->
+
+<style>
+    .light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+  -webkit-animation: floatUp 4s infinite linear;
+  -moz-animation: floatUp 4s infinite linear;
+  -o-animation: floatUp 4s infinite linear;
+  animation: floatUp 4s infinite linear;
+   -webkit-transform: scale(1.0);
+   -moz-transform: scale(1.0);
+   -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.x2{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+button:focus{
+  outline: none;
+}
+
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+
+</style>
+
+<div class='light x1'></div>
+  <div class='light x2'></div>
+  <div class='light x3'></div>
+  <div class='light x4'></div>
+  <div class='light x5'></div>
+  <div class='light x6'></div>
+  <div class='light x7'></div>
+  <div class='light x8'></div>
+  <div class='light x9'></div>
 
 </body>
 </html>
