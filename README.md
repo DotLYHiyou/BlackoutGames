@@ -42,5 +42,5 @@ Discord: Coming Soon
 
 ## Acknowledgements
 
-- Thanks to everyone who contributes to this project.
+- Thanks to everyone for visiting! We just hit 10k!
 - Special thanks to Netlify, Vercel, and Cloudflare for their hosting services.
