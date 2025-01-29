@@ -15,7 +15,7 @@ Visit the live website: [BlackoutGames](https://blackoutgames.netlify.app)
 ## Features
 
 - A wide variety of unblocked games and apps.
-- Integrated search engine for easy navigation.
+- Integrated proxy to navigate the internet freely
 - Hosted on Netlify, Vercel, and Cloudflare Pages.
 
 ## Topics
