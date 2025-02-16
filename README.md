@@ -1,6 +1,7 @@
 # BlackoutGames
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=blackoutgames&repository=DotLYHiyou%2FBlackoutGames&branch=main&instance_type=free&regions=was)
 
 ## Description
 
