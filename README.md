@@ -35,10 +35,10 @@ Just go to the website.
 
 Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 
-## Contact
+## Bug Reports / Contact
 
 DotLYHiyou - [GitHub Profile](https://github.com/DotLYHiyou)
-Discord: Coming Soon
+[Discord](https://discord.gg/rcCnzaPu)
 
 ## Acknowledgements
 
