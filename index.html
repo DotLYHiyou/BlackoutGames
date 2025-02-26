@@ -52,8 +52,31 @@
     }, 3000); // 3000 milliseconds = 3 seconds
   };
 </script>
+
 </head>
 <body>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
+  </script>
 </body>
 </html>
 <div class="dust-particle"></div></body>
