@@ -37,8 +37,8 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 
 ## Bug Reports / Contact
 
-DotLYHiyou - [GitHub Profile](https://github.com/DotLYHiyou)
-[Discord](https://discord.gg/rcCnzaPu)
+- [GitHub Profile](https://github.com/DotLYHiyou)
+- [Discord](https://discord.gg/rcCnzaPu)
 
 ## Acknowledgements
 
