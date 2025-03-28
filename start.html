@@ -102,6 +102,13 @@
     body, html {
       overflow: hidden;
     }
+      body{
+             background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+ 
+      }
   </style>
 </head>
 <body>
@@ -266,6 +273,28 @@ background: linear-gradient(90deg, rgba(31,30,30,1) 23%, rgba(54,52,52,1) 53%, r
         },
         "retina_detect": true
     });
+  </script>
+       <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
   </script>
 </head>
 <body>
