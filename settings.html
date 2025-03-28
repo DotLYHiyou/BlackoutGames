@@ -41,6 +41,52 @@
   .label {
     font-family:Poppins;
   }
+  .button {
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: Poppins;
+    font-weight: 425;
+    color: black;
+    background-color: white;
+    padding: 1em 2em;
+    margin: 5px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: none; /* Removed the white shadow on hover */
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.button::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
   .text {
     background-color: white;
     color: black;
@@ -87,8 +133,10 @@
     <option value="media/eagles.jpg">Eagles Super Bowl LIX </option>
     <option value="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3ZwYXFta3hwYzBkbHE1dzBucjQ3aGg1cG93d2I1Z2planV1NWdwNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9bTjZrytydVRK/giphy.webp">Star-Themed</option>
     <option value="https://media.lmpm.website/uploads/sites/18/2023/07/Untitled-design-2023-08-10T093341.090.png">(Developer Favorite) Sunset Sky</option>
-    <option value="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2t0cDFjdms4N290dGs1NWpheGp4dHF6b2FqdHl2OTVhZG00aG5yMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PXqNXjkTmEfRK/200.webp">(NEW) Pong</option> 
-     <option value="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNtOGFpeXprOTE5cnd4MmJkaW94dzNhem51YXk1c2Y4aTh4dzlpZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LjULRGiyt1KpO/giphy.webp">(NEW) Racing</option> 
+    <option value="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2t0cDFjdms4N290dGs1NWpheGp4dHF6b2FqdHl2OTVhZG00aG5yMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PXqNXjkTmEfRK/200.webp"> Pong</option> 
+     <option value="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXNtOGFpeXprOTE5cnd4MmJkaW94dzNhem51YXk1c2Y4aTh4dzlpZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LjULRGiyt1KpO/giphy.webp"> Racing</option> 
+     <option value="media/j4o.gif">(New) Techno Glisten</option> 
+     <option value="media/aurora.png">(New) Aurora Sky</option>
     <!-- Add more options as needed -->
   </select>
 </body>
@@ -147,5 +195,5 @@
 
 <img src="favicon.ico" alt="Image">
 </body>
-
+<button class="button" onclick="window.location.href='start.html'">Back</button>
 </html>

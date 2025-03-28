@@ -12,17 +12,7 @@
     <title>Blackout V4</title>
 
     <h1>Blackout V4</h1>
-    <p>This is beta so expect some bugs which we later will fix</p>
-
-    
-
-
-
-
-
-
-
-
+    <p>V4 Update!: Revamped home screen, new games, new themes, and more.</p>
 
   <style>
     /* Center the container */
@@ -35,7 +25,52 @@
       left:35%;
       top:200px;
     }
+    .button {
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: Poppins;
+    font-weight: 425;
+    color: black;
+    background-color: white;
+    padding: 1em 2em;
+    margin: 5px;
+}
 
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: none; /* Removed the white shadow on hover */
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.button::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
     /* Style for the image */
     .image {
       width: 75px; /* Adjust this value to fit your image size */
@@ -63,6 +98,11 @@
     }
    
   </style>
+  <style>
+    body, html {
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -83,6 +123,12 @@
   <div class="bottom-script">
     <script type="text/javascript" src="https://www.stat-counter.org/count/fhw0"></script>
 </div>
+<div style="position: absolute; top: 0; right: 0;">
+   
+    <a href="links.html">
+       <button class="button" >Blackout Alt Links</button>
+       </a>
+     </div>
   <style>
       body {
  background: rgb(31,30,30);
