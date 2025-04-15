@@ -3,25 +3,50 @@
 <head>
 <title>Subway Surfers</title>
 <style>
-    body{
+    body {
         margin: 0; /* Remove default margin */
     }
-    iframe{      
+    iframe {      
         display: block;  /* iframes are inline by default */   
         height: 100vh;  /* Set height to 100% of the viewport height */   
         width: 100vw;  /* Set width to 100% of the viewport width */     
         border: none; /* Remove default border */
         background: lightyellow; /* Just for styling */
     }
-
 </style>
 </head>
 <body>
-    <iframe src="https://dddavit.github.io/subway/"></iframe>
+    <iframe id="gameIframe" src="https://snowpeeps.netlify.app/games/subwaysurfers/"></iframe>
     <style>
-  body {
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  }
-</style>
+        body {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        }
+    </style>
+    <script>
+        const iframe = document.getElementById('gameIframe');
+        const alternateLinks = [
+            "https://dddavit.github.io/subway/",
+        ];
+        let currentIndex = 0;
+
+        // Prevent the page from redirecting entirely
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = ''; // Required for most browsers to show a confirmation dialog
+        });
+
+        // Monitor iframe for blocked URLs
+        setInterval(() => {
+            try {
+                const iframeSrc = iframe.contentWindow.location.href;
+                if (iframeSrc.startsWith("https://blocked.goguardian.com")) {
+                    currentIndex = (currentIndex + 1) % alternateLinks.length;
+                    iframe.src = alternateLinks[currentIndex];
+                }
+            } catch (e) {
+                // Catch cross-origin errors
+            }
+        }, 1000); // Check every second
+    </script>
 </body>
 </html>
