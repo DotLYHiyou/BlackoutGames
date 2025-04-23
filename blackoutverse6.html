@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Games</title>
+</head>
+<body>
+  
+
+<style>
+.button {
+    position: relative;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    border: none;
+    font-family: Poppins;
+    font-weight: 425;
+    color: black;
+    background-color: white;
+    padding: 1em 2em;
+    margin: 5px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: none; /* Removed the white shadow on hover */
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.button::after {
+    background-color: #fff;
+}
+
+.button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+
+  .sample {
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+  
+  }
+  .sample:hover {
+    box-shadow:5px 10px 20px #ffffff;
+  }
+</style>
+<button class="button" onclick="window.location.href='games/deadrails.html'">Dead Rails</button>
+<button class="button" onclick="window.location.href='games/geodash.html'">Geometry Dash</button>
+<button class="button" onclick="window.location.href='games/geodashsubzero.html'">Geometry Dash: Subzero</button>
+ <style>
+   
+   
+  img {
+    display: block;
+    margin: auto;
+    width: 35%; /* change this value to adjust the size of the image */
+  }
+</style>
+
+  <style>
+    body {
+      background-color: black;
+      font-family:sans;
+      background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    }
+  </style>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Get the select element
+  var select = document.getElementById("background-select");
+
+  // Set initial background image based on stored preference or default
+  var selectedBackground = localStorage.getItem("selectedBackground");
+  
+  if (selectedBackground) {
+    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
+    select.value = selectedBackground;
+  }
+
+   // Listen for changes in the select element
+   select.addEventListener("change", function() {
+     var newBackground = this.value;
+     document.body.style.backgroundImage = "url(" + newBackground + ")";
+     localStorage.setItem("selectedBackground", newBackground);
+   });
+});
+
+  </script>
+
+
+
+
+<img src="favicon.ico" alt="Image">
+</body>
+<button class="button" onclick="window.location.href='blackoutverse4.html'">Back</button>
+</html>
+<body>
+  <div class="dust-particle"></div></body>
+<style>
+  #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  }
+</style>
+</head>
+<body>
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js', {
+      "particles": {
+          "number": {
+              "value": 160,
+              "density": {
+                  "enable": true,
+                  "value_area": 800
+              }
+          },
+          "color": {
+              "value": "#ffffff"
+          },
+          "shape": {
+              "type": "circle",
+              "stroke": {
+                  "width": 0,
+                  "color": "#000000"
+              },
+              "polygon": {
+                  "nb_sides": 5
+              },
+              "image": {
+                  "src": "img/github.svg",
+                  "width": 100,
+                  "height": 100
+              }
+          },
+          "opacity": {
+              "value": 1,
+              "random": true,
+              "anim": {
+                  "enable": true,
+                  "speed": 1,
+                  "opacity_min": 0,
+                  "sync": false
+              }
+          },
+          "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                  "enable": false,
+                  "speed": 4,
+                  "size_min": 0.3,
+                  "sync": false
+              }
+          },
+          "line_linked": {
+              "enable": false,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+          },
+          "move": {
+              "enable": true,
+              "speed": 1,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                  "enable": false,
+                  "rotateX": 600,
+                  "rotateY": 600
+              }
+          }
+      },
+      "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+              "onhover": {
+                  "enable": true,
+                  "mode": "bubble"
+              },
+              "onclick": {
+                  "enable": true,
+                  "mode": "repulse"
+              },
+              "resize": true
+          },
+          "modes": {
+              "grab": {
+                  "distance": 400,
+                  "line_linked": {
+                      "opacity": 1
+                  }
+              },
+              "bubble": {
+                  "distance": 250,
+                  "size": 0,
+                  "duration": 2,
+                  "opacity": 0,
+                  "speed": 3
+              },
+              "repulse": {
+                  "distance": 400,
+                  "duration": 0.4
+              },
+              "push": {
+                  "particles_nb": 4
+              },
+              "remove": {
+                  "particles_nb": 2
+              }
+          }
+      },
+      "retina_detect": true
+  });
+</script>
+
+</body>
