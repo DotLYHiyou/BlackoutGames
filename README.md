@@ -1,10 +1,9 @@
 # BlackoutGames
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=blackoutgames&repository=DotLYHiyou%2FBlackoutGames&branch=main&instance_type=free&regions=was)
 ## Description
 
-BlackoutGames is a modern unblocked games website featuring a variety of games, apps, and even a search engine for those who are feeling fancy! This project is designed to provide easy access to unblocked games and applications.
+BlackoutGames is the ultimate unblocked games website for anyone who wants to evade restrictions at school. It includes a rapidly increasing number of games, useful tools, a game-changing search wngine/proxy and frequent high-quality updates that bring much needed things. If you want anything to be added, put it in the game request form!
 
 If you fork this repository, please give it a star and ensure there is a page on your website giving credit to the creator.
 
