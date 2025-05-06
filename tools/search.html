@@ -1,102 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blackout Search</title>
+<style>
+    body {
+        margin: 0; /* Remove default margin */
+    }
+    iframe {      
+        display: block;  /* iframes are inline by default */   
+        height: 100vh;  /* Set height to 100% of the viewport height */   
+        width: 100vw;  /* Set width to 100% of the viewport width */     
+        border: none; /* Remove default border */
+        background: lightyellow; /* Just for styling */
+    }
+</style>
 </head>
 <body>
-<h1>Blackout</h1>
-<style>
-  .search-bar {
-            width: 100%;
-            background: transparent;
-            border: none;
-            outline: none;
-            color: white;
-            font-size: 18px;
-            text-align:center;
-
+    <iframe id="gameIframe" src="https://blackout-search-v5.vercel.app/"></iframe>
+    <style>
+        body {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
         }
-        .header {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 60px;
-            background: black;
-            border: 2px solid white;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-        }
-        h1{
-        left:40%;
-        position:fixed;
-        color:white;
-        top:15%;
-        font-size:70px;
-            font-family: Poppins;
+    </style>
+    <script>
+        const iframe = document.getElementById('gameIframe');
 
-        }
-        body{
-        background-color:#141414;
-        font-family: Poppins;
-        color:white;
-
-
-        }
-        .credits{
-            top:20px;
-            left:80%;
-            position:fixed;
-        }
-        .logo{
-            width:50px;
-            top:25px;
-            left:95%;
-            position:fixed;
-        }
-        h2{
-            font-size: 20px;
-
-        }
-
-
-        </style>
-        <div class="header">
-        <input type="text" class="search-bar" placeholder="search..." onkeydown="handleSearch(event)">
-    </div>
-    
-     <script>
-        function handleSearch(event) {
-            if (event.key === "Enter") {
-                let query = event.target.value.trim();
-                if (query) {
-                    let proxyUrl = `https://blackoutgames.pages.dev/active/iframe.html#https://bing.com/search?q=${encodeURIComponent(query)}`;
-                    window.location.href = proxyUrl;
-                }
-            }
-        }
-</script>
-<script>
-    alert("This is a beta and if it says page not found then refresh  ")
-</script>
-<div class="credits">
-    <h2>made by T9 OS owner</h2>
-    <a href="https://t9os.com/">
-        <img class="logo" src="https://t9os.com/logo22.png">
-    </a>
-
-</div>
-
+        // Prevent the page from redirecting entirely
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = ''; // Required for most browsers to show a confirmation dialog
+        });
+    </script>
 </body>
 </html>
