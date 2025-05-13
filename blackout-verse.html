@@ -306,4 +306,17 @@
 </script>
 </body>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = new Audio("test.mp3");
+    audio.loop = true;
+
+    // Check if music is enabled in localStorage
+    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
+
+    if (musicEnabled) {
+      audio.play();
+    }
+  });
+</script>
 </html>

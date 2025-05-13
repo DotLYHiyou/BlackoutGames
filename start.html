@@ -137,21 +137,30 @@
     <button class="button" id="music-toggle">Enable Chill Lobby Music?</button>
 </div>
 <script>
-  let musicEnabled = false;
-  let audio = new Audio("test.mp3"); // Changed from test.mp4 to test.mp3
-  audio.loop = true;
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = new Audio("test.mp3");
+    audio.loop = true;
 
-  document.getElementById("music-toggle").addEventListener("click", function() {
-    musicEnabled = !musicEnabled;
+    // Check if music is enabled in localStorage
+    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
+
     if (musicEnabled) {
-      alert("Music enabled");
       audio.play();
-      this.textContent = "Disable Chill Lobby Music?";
-    } else {
-      alert("Music disabled");
-      audio.pause();
-      this.textContent = "Enable Chill Lobby Music?";
     }
+
+    document.getElementById("music-toggle").addEventListener("click", function() {
+      const isPlaying = !musicEnabled;
+      localStorage.setItem("musicEnabled", isPlaying);
+      if (isPlaying) {
+        alert("Music enabled");
+        audio.play();
+        this.textContent = "Disable Chill Lobby Music?";
+      } else {
+        alert("Music disabled");
+        audio.pause();
+        this.textContent = "Enable Chill Lobby Music?";
+      }
+    });
   });
 </script>
   <style>
