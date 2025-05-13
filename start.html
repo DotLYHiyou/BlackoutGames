@@ -12,7 +12,8 @@
     <title>Blackout V4</title>
 
     <h1>Blackout V4</h1>
-    <p>Search is fixed!</p>
+    <p>The Blackout Spring Drop Part 1 is here! It brings quality of life changes to the menu and new features!</p>
+    <p>Part 2 will extend the Tab Cloaks to the games, and revamp wallpapers. You can put in wallpaper requests! (No bad ones) </p>
     <p>Join our Discord for updates, suggest games via the form, and star Blackout on GitHub if you fork it!</p>
 
   <style>
@@ -130,11 +131,29 @@
  <a href='https://www.easybooking.eu/'>Blackout</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=5061e11a746e4d89040ef10a4d53d649e915a78b'></script>
 </div>
 <div style="position: absolute; top: 0; right: 0;">
-   
     <a href="links.html">
-       <button class="button" >Blackout Alt Links</button>
-       </a>
-     </div>
+       <button class="button">Blackout Alt Links</button>
+    </a>
+    <button class="button" id="music-toggle">Enable Chill Lobby Music?</button>
+</div>
+<script>
+  let musicEnabled = false;
+  let audio = new Audio("test.mp3"); // Changed from test.mp4 to test.mp3
+  audio.loop = true;
+
+  document.getElementById("music-toggle").addEventListener("click", function() {
+    musicEnabled = !musicEnabled;
+    if (musicEnabled) {
+      alert("Music enabled");
+      audio.play();
+      this.textContent = "Disable Chill Lobby Music?";
+    } else {
+      alert("Music disabled");
+      audio.pause();
+      this.textContent = "Enable Chill Lobby Music?";
+    }
+  });
+</script>
   <style>
     h1 {
       color: white;
@@ -180,6 +199,32 @@
 </head>
 
 <body>
-    
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+    favicon.rel = "icon";
+    document.head.appendChild(favicon);
+
+    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
+
+    switch (storedPreset) {
+      case "google":
+        document.title = "Google";
+        favicon.href = "https://www.google.com/favicon.ico";
+        break;
+      case "classroom":
+        document.title = "Google Classroom";
+        favicon.href = "https://classroom.google.com/favicon.ico";
+        break;
+      case "vocabulary":
+        document.title = "Vocabulary.com";
+        favicon.href = "https://www.vocabulary.com/favicon.ico";
+        break;
+      default:
+        document.title = "Games";
+        favicon.href = "favicon.ico";
+    }
+  });
+</script>
 </body>
 </html>

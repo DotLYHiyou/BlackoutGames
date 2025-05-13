@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -140,6 +139,26 @@
      <option value="media/aurora.png">(New) Aurora Sky</option>
     <!-- Add more options as needed -->
   </select>
+
+  <style>
+  #tab-select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    width: 200px;
+    font-family: Poppins;
+    margin-top: 20px;
+  }
+</style>
+  <label class="label" for="tab-select">Tab Cloak:</label>
+  <select id="tab-select">
+    <option value="default">Default</option>
+    <option value="google">Google</option>
+    <option value="classroom">Google Classroom</option>
+    <option value="vocabulary">Vocabulary.com</option>
+  </select>
 </body>
 </html>
 
@@ -165,6 +184,43 @@
    });
 });
 
+  document.addEventListener("DOMContentLoaded", function() {
+      const tabSelect = document.getElementById("tab-select");
+      const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+      favicon.rel = "icon";
+      document.head.appendChild(favicon);
+
+      // Set initial tab preset based on stored preference or default
+    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
+    tabSelect.value = storedPreset;
+    updateTabPreset(storedPreset);
+
+    tabSelect.addEventListener("change", function() {
+      const preset = this.value;
+      updateTabPreset(preset);
+      localStorage.setItem("selectedTabPreset", preset); // Store the selected preset
+    });
+
+    function updateTabPreset(preset) {
+      switch (preset) {
+        case "google":
+          document.title = "Google";
+          favicon.href = "https://www.google.com/favicon.ico";
+          break;
+        case "classroom":
+          document.title = "Google Classroom";
+          favicon.href = "https://classroom.google.com/favicon.ico";
+          break;
+        case "vocabulary":
+          document.title = "Vocabulary.com";
+          favicon.href = "https://www.vocabulary.com/favicon.ico";
+          break;
+        default:
+          document.title = "Games";
+          favicon.href = "favicon.ico";
+      }
+    }
+    });
   </script>
 
 

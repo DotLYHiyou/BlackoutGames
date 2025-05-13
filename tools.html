@@ -194,7 +194,7 @@
   </style>
 </head>
 <body>
-  <button class="button" onclick="search()">Blackout Search V5</button>
+  <button class="button" onclick="search()">Shadow Unblocker (Press Google Btn)</button>
   <button class="button" onclick="force()">NVIDIA GeForce NOW</button>
   <button class="button" onclick="dollar()">Thirty Dollar Website</button>
   <button class="button" onclick="x86()">Virtual v86</button>
@@ -248,7 +248,33 @@
 
   </script>
   <img src="favicon.ico" alt="Image">
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+    favicon.rel = "icon";
+    document.head.appendChild(favicon);
 
+    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
+
+    switch (storedPreset) {
+      case "google":
+        document.title = "Google";
+        favicon.href = "https://www.google.com/favicon.ico";
+        break;
+      case "classroom":
+        document.title = "Google Classroom";
+        favicon.href = "https://classroom.google.com/favicon.ico";
+        break;
+      case "vocabulary":
+        document.title = "Vocabulary.com";
+        favicon.href = "https://www.vocabulary.com/favicon.ico";
+        break;
+      default:
+        document.title = "Games";
+        favicon.href = "favicon.ico";
+    }
+  });
+</script>
 </body>
 <button class="button" onclick="window.location.href='start.html'">Back</button>
 </html>

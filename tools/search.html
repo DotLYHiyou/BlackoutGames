@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-    <iframe id="gameIframe" src="https://blackout-search-v5.vercel.app/"></iframe>
+    <iframe id="gameIframe" src="https://bottom-stepha-spacejs-ff271fc4.koyeb.app/"></iframe>
     <style>
         body {
             background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
@@ -31,5 +31,32 @@
             event.returnValue = ''; // Required for most browsers to show a confirmation dialog
         });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
+    favicon.rel = "icon";
+    document.head.appendChild(favicon);
+
+    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
+
+    switch (storedPreset) {
+      case "google":
+        document.title = "Google";
+        favicon.href = "https://www.google.com/favicon.ico";
+        break;
+      case "classroom":
+        document.title = "Google Classroom";
+        favicon.href = "https://classroom.google.com/favicon.ico";
+        break;
+      case "vocabulary":
+        document.title = "Vocabulary.com";
+        favicon.href = "https://www.vocabulary.com/favicon.ico";
+        break;
+      default:
+        document.title = "Games";
+        favicon.href = "favicon.ico";
+    }
+  });
+</script>
 </body>
 </html>
