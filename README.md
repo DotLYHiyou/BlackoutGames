@@ -5,7 +5,7 @@
 Blackout will be remade soon under a new name and completely reimagined, with new layers of security against things like Securly and GoGuardian. It will be better, faster, and more long-lasting than before. Please note that this does not mean the links that Blackout has will be decommissioned, we will keep them and make new ones as well. Blackout will stay open, and this remake wont take too long. Make sure to join the Discord server for more updates.
 ## Description
 
-BlackoutGames is the ultimate unblocked games website for anyone who wants to evade restrictions at si7chool. It includes a rapidly increasing number of games, useful tools, a game-changing search wngine/proxy and frequent high-quality updates that bring much needed things. If you want anything to be added, put it in the game request form!
+BlackoutGames is the ultimate unblocked games website for anyone who wants to evade restrictions at school. It includes a rapidly increasing number of games, useful tools, a game-changing search engine/proxy and frequent high-quality updates that bring much needed things. If you want anything to be added, put it in the game request form!
 
 If you fork this repository, please give it a star and ensure there is a page on your website giving credit to the creator.
 
