@@ -2,7 +2,7 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ## Notice
-Blackout will be remade soon under a new name and completely reimagined, with new layers of security against things like Securly and GoGuardian. It will be better, faster, and more long-lasting than before. Please note that this does not mean the links that Blackout has will be decommissioned, we will keep them and make new ones as well. Blackout will stay open, and this remake wont take too long. Make sure to join the Discord server for more updates.
+Blackout will be remade soon under the name ZenithHub and completely reimagined, with new layers of security against things like Securly and GoGuardian. It will be better, faster, and more long-lasting than before. Please note that this does not mean the links that Blackout has will be decommissioned, we will keep them and make new ones as well. Blackout will stay open, and this remake wont take too long. Make sure to join the Discord server for more updates.
 ## Description
 
 BlackoutGames is the ultimate unblocked games website for anyone who wants to evade restrictions at school. It includes a rapidly increasing number of games, useful tools, a game-changing search engine/proxy and frequent high-quality updates that bring much needed things. If you want anything to be added, put it in the game request form!
