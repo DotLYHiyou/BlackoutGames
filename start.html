@@ -1,238 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ZenithHub</title>
+    <!-- Font Imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Blackout V4</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Ubuntu;
+            text-align: center;
+            color: rgb(0, 255, 255);
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
 
-    <h1>Blackout V4</h1>
-    <p>Blackout is going to be completely re-done under a new name soon. </p>
-    <p>It will remain open with small tweaks here and there, so don't leave just yet. The links will be the same when the rework is out, along with new ones.</p>
-    <p>Join our Discord for updates, suggest games via the form, and star Blackout on GitHub if you fork it! </p>
-  <style>
-    /* Center the container */
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Adjust this value to fit your needs */
-      position: absolute;
-      left:35%;
-      top:200px;
-    }
-    .button {
-    position: relative;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    transition: all .2s;
-    border: none;
-    font-family: Poppins;
-    font-weight: 425;
-    color: black;
-    background-color: white;
-    padding: 1em 2em;
-    margin: 5px;
-}
+        h1 {
+            font-size: 80px;
+            margin-top: 50px;
+        }
 
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: none; /* Removed the white shadow on hover */
-}
+        /* Center Content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
 
-.button:active {
-    transform: translateY(-1px);
-}
+        /* Button Styles */
+        .button {
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            transition: 0.2s ease-in-out;
+            border: none;
+            font-family: Ubuntu;
+            font-weight: 425;
+            color: black;
+            background-color: white;
+            padding: 1em 2em;
+            margin: 10px;
+            cursor: pointer;
+        }
 
-.button::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
+        .button:hover {
+            transform: translateY(-3px);
+        }
 
-.button::after {
-    background-color: #fff;
-}
+        /* Image Styles */
+        .image {
+            width: 75px;
+            height: 75px;
+            padding: 10px;
+            transition: 0.3s ease-in-out;
+        }
 
-.button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-    /* Style for the image */
-    .image {
-      width: 75px; /* Adjust this value to fit your image size */
-      height: 75px; /* Adjust this value to fit your image size */
-      padding:10px 20px;
-      gap:500px;
+        .image:hover {
+            animation: shake 0.5s linear infinite;
+        }
 
-    }
-    .image:hover {
-         animation: glowing 2s infinite;
-         animation: shake-animation 0.5s linear infinite;
-}
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+        }
 
-@keyframes shake-animation {
-  /* Define the shaking animation */
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-
-    }
-    h1 {
-      font-size: 100px;
-      position: static;
-    }
-   
-  </style>
-  <style>
-    body, html {
-      overflow: hidden;
-      background-color: black;
-    }
-     
-  </style>
-
+        /* Top Right Button Section */
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-      <a href="blackout-verse.html">
-    <img class="image" src="media/game.png" alt="Image">
-    </a>
-       <a href="tools.html">
-    <img class="image" src="media/tools.png" alt="Image">
-    </a>
-    
-    <a href="settings.html">
-    <img class="image" src="media/theme.png" alt="Image">
-    </a>
-    <a href="https://forms.gle/kfmZjb7JkCZHKoGH8">
-    <img class="image" src="media/suggestion.png" alt="Image">
-    </a>
-    <p><a href="https://discord.gg/U8tT8AazXb" target="_blank" style="color: white; text-decoration: underline;">Discord Server Link</a></p>
-  </div>
-  <div class="bottom-script">
-<script type="text/javascript" src="https://www.stat-counter.org/count/hn56"></script><br>
- <a href='https://www.easybooking.eu/'>Blackout</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=5061e11a746e4d89040ef10a4d53d649e915a78b'></script>
-</div>
-<div style="position: absolute; top: 0; right: 0;">
-    <a href="links.html">
-       <button class="button">Blackout Alt Links</button>
-    </a>
-    <button class="button" id="music-toggle">Enable Chill Lobby Music?</button>
-</div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const audio = new Audio("media/lobby.mp3");
-    audio.loop = true;
 
-    // Check if music is enabled in localStorage
-    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
+    <h1>ZenithHub</h1>
+    <p>Welcome to ZenithHub! ZenithHub (formerly BlackoutGames) is the now an advanced easily deployable gamesite!</p>
+    <p>I made it so that some games look diffrent on the outside, but rest assured, no games were swapped out.</p>
+    <p>Join our Discord for updates, suggest games via the form, and star ZenithHub on GitHub if you fork it!</p>
 
-    if (musicEnabled) {
-      audio.play();
-    }
+    <!-- Icon Links -->
+    <div class="container">
+        <a href="g@mes.html"><img class="image" src="media/game.png" alt="G@mes"></a>
+        <a href="t00ls.html"><img class="image" src="media/tools.png" alt="T00ls"></a>
+        <a href="settings.html"><img class="image" src="media/theme.png" alt="S3tt!ngs"></a>
+        <a href="https://forms.gle/z7NSXDFTwegpjcUX9"><img class="image" src="media/suggestion.png" alt="Suggest"></a>
+    </div>
 
-    document.getElementById("music-toggle").addEventListener("click", function() {
-      const isPlaying = !musicEnabled;
-      localStorage.setItem("musicEnabled", isPlaying);
-      if (isPlaying) {
-        alert("Music enabled");
-        audio.play();
-        this.textContent = "Disable Chill Lobby Music?";
-      } else {
-        alert("Music disabled");
-        audio.pause();
-        this.textContent = "Enable Chill Lobby Music?";
-      }
-    });
-  });
-</script>
-  <style>
-    h1 {
-      color: white;
-    }
-      body {
-  font-family: Poppins;
-  text-align: center;
-  color:rgb(255, 255, 255);
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-size:cover;
+    <!-- Discord Link -->
+    <p><a href="https://discord.gg/U8tT8AazXb" target="_blank" style="color: white; text-decoration: underline;">Join the Discord Server</a></p>
 
-      }
-  </style>
+    <!-- Top Right Buttons -->
+    <div class="top-right">
+        <a href="links.html"><button class="button">ZenithHub Alt Links</button></a>
+    </div>
 
-  </head>
-  <body>
-
-       <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  // Get the select element
-  var select = document.getElementById("background-select");
-
-  // Set initial background image based on stored preference or default
-  var selectedBackground = localStorage.getItem("selectedBackground");
-  
-  if (selectedBackground) {
-    document.body.style.backgroundImage = "url(" + selectedBackground + ")";
-    select.value = selectedBackground;
-  }
-
-   // Listen for changes in the select element
-   select.addEventListener("change", function() {
-     var newBackground = this.value;
-     document.body.style.backgroundImage = "url(" + newBackground + ")";
-     localStorage.setItem("selectedBackground", newBackground);
-   });
-});
-
-  </script>
-
-</head>
-
-<body>
+    <!-- Dynamic Title & Favicon -->
     <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
-    favicon.rel = "icon";
-    document.head.appendChild(favicon);
+        document.addEventListener("DOMContentLoaded", function() {
+            const favicon = document.createElement("link");
+            favicon.rel = "icon";
+            document.head.appendChild(favicon);
 
-    const storedPreset = localStorage.getItem("selectedTabPreset") || "default";
+            const preset = localStorage.getItem("selectedTabPreset") || "default";
 
-    switch (storedPreset) {
-      case "google":
-        document.title = "Google";
-        favicon.href = "https://www.google.com/favicon.ico";
-        break;
-      case "classroom":
-        document.title = "Google Classroom";
-        favicon.href = "https://classroom.google.com/favicon.ico";
-        break;
-      case "vocabulary":
-        document.title = "Vocabulary.com";
-        favicon.href = "https://www.vocabulary.com/favicon.ico";
-        break;
-      default:
-        document.title = "Games";
-        favicon.href = "favicon.ico";
-    }
-  });
-</script>
+            switch (preset) {
+                case "google":
+                    document.title = "Google";
+                    favicon.href = "https://www.google.com/favicon.ico";
+                    break;
+                case "classroom":
+                    document.title = "Google Classroom";
+                    favicon.href = "https://www.gstatic.com/classroom/logo_square_rounded.svg";
+                    break;
+                case "vocabulary":
+                    document.title = "Vocabulary.com";
+                    favicon.href = "https://www.vocabulary.com/favicon.ico";
+                    break;
+                default:
+                    document.title = "ZenithHub";
+                    favicon.href = "favicon.ico";
+            }
+        });
+    </script>
+
 </body>
 </html>

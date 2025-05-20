@@ -1,9 +1,9 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Games</title>
@@ -59,7 +59,10 @@
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-
+   .center {
+            display: flex;
+            justify-content: center;
+        }
 
 
 
@@ -75,37 +78,6 @@
     box-shadow:5px 10px 20px #ffffff;
   }
 </style>
-<button class="button" onclick="window.location.href='games/fruit.html'">Fruit Ninja</button>
-
-<button class="button" onclick="window.location.href='games/smc.html'">Super Mario Construct</button>
-
-<button class="button" onclick="window.location.href='games/metro.html'">Metroid Fusion</button>
-
-<button class="button" onclick="window.location.href='games/celeste.html'">Celeste</button>
-
-<button class="button" onclick="window.location.href='games/slope.html'">Slope</button>
-
-<button class="button" onclick="window.location.href='games/mc.html'" class="btn">Minecraft (1.5.2)</button>
-
-<button class="button" onclick="window.location.href='games/mc2.html'">Minecraft (Classic)</button>
-
-<button class="button" onclick="window.location.href='games/marioboom.html'">Mario Combat</button>
-
-
-
-
-
-
-
- <style>
-   
-  img {
-    display: block;
-    margin: auto;
-    width: 35%; /* change this value to adjust the size of the image */
-  }
-</style>
-
   <style>
     body {
       background-color:black;
@@ -116,7 +88,14 @@
     padding: 0;
     }
   </style>
-
+<button class="button" onclick="window.location.href='games/drift.html'">Dr!ft Hunt3rs</button>
+<button class="button" onclick="window.location.href='games/subway.html'">Train Station Chase</button>
+<button class="button" onclick="window.location.href='games/roof2.html'">Basement Shooters 2</button>
+<button class="button" onclick="window.location.href='games/bitlife.html'">Gigibyte Afterlife</button>
+<button class="button" onclick="window.location.href='games/fancyp.html'">Fancy Pants Adventure</button>
+<button class="button" onclick="window.location.href='games/linerider.html'">Line Rider</button>
+<button class="button" onclick="window.location.href='games/taptap.html'">Tap Goal</button>
+<button class="button" onclick="window.location.href='games/slope2.html'">Sl0pe 2</button>
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -144,11 +123,12 @@
 
 
 
-<img src="favicon.ico" alt="Image">
+ <div class="center">
+  <img src="favicon.ico" alt="Image">
+    </div>
 </body>
-  <button class="button" onclick="window.location.href='start.html'">Back</button>
-    <button class="button" onclick="window.location.href='blackoutverse2.html'">Next Page</button>
-<button class="button" onclick="window.location.href='https://forms.gle/TnsuEtnpUyN7zFFU9'">Game Request</button>
+  <button class="button" onclick="window.location.href='g@mes2.html'">Back</button>
+  <button class="button" onclick="window.location.href='g@mes4.html'">Next</button>
 <body>
   <div class="dust-particle"></div></body>
 <style>
@@ -277,6 +257,8 @@
       "retina_detect": true
   });
 </script>
+
+</body>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
@@ -292,7 +274,7 @@
         break;
       case "classroom":
         document.title = "Google Classroom";
-        favicon.href = "https://classroom.google.com/favicon.ico";
+        favicon.href = "https://www.gstatic.com/classroom/logo_square_rounded.svg";
         break;
       case "vocabulary":
         document.title = "Vocabulary.com";
@@ -301,21 +283,6 @@
       default:
         document.title = "Games";
         favicon.href = "favicon.ico";
-    }
-  });
-</script>
-</body>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const audio = new Audio("media/lobby.mp3");
-    audio.loop = true;
-
-    // Check if music is enabled in localStorage
-    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
-
-    if (musicEnabled) {
-      audio.play();
     }
   });
 </script>

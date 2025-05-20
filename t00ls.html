@@ -1,12 +1,12 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Games</title>
+  <title>Tools</title>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
     border-radius: 10px;
     transition: all .2s;
     border: none;
-    font-family: Poppins;
+    font-family: Ubuntu;
     font-weight: 425;
     color: black;
     background-color: white;
@@ -59,10 +59,7 @@
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-   .center {
-            display: flex;
-            justify-content: center;
-        }
+
 
 
 
@@ -78,24 +75,34 @@
     box-shadow:5px 10px 20px #ffffff;
   }
 </style>
+<button class="button" onclick="window.location.href='games/search.html'">Blackout Search</button>
+<button class="button" onclick="window.location.href='games/blobwifi.html'">Bl0bW!f!</button>
+<button class="button" onclick="window.location.href='games/dollar.html'">30 D0ll@r W3bs!te</button>
+<button class="button" onclick="window.location.href='games/exthanger.html'">ExtPr!nt3r</button>
+<button class="button" onclick="window.location.href='games/terminator.html'">T3rm!n@t0r VM</button>
+<button class="button" onclick="window.location.href='games/v86.html'">x86 VM</button>
+
+ <style>
+   
+  img {
+    display: block;
+    margin: auto;
+    width: 35%; /* change this value to adjust the size of the image */
+  }
+</style>
+
   <style>
     body {
+      color: rgb(0, 255, 255);
       background-color:black;
-      font-family:sans;
+      font-family: Ubuntu;
       background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     }
   </style>
-<button class="button" onclick="window.location.href='games/drift.html'">Drift hunters</button>
-<button class="button" onclick="window.location.href='games/subway.html'">Subway Surfers</button>
-<button class="button" onclick="window.location.href='games/roof2.html'">Rooftop Snipers 2</button>
-<button class="button" onclick="window.location.href='games/bitlife.html'">Bitlife</button>
-<button class="button" onclick="window.location.href='games/fancyp.html'">Fancy Pants Adventure</button>
-<button class="button" onclick="window.location.href='games/linerider.html'">Line Rider</button>
-<button class="button" onclick="window.location.href='games/taptap.html'">Tap Goal</button>
-<button class="button" onclick="window.location.href='games/slope2.html'">Slope 2</button>
+
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -123,12 +130,9 @@
 
 
 
- <div class="center">
-  <img src="favicon.ico" alt="Image">
-    </div>
+<img src="favicon.ico" alt="Image">
 </body>
-  <button class="button" onclick="window.location.href='blackoutverse2.html'">Back</button>
-  <button class="button" onclick="window.location.href='blackoutverse4.html'">Next</button>
+  <button class="button" onclick="window.location.href='start.html'">Back</button>
 <body>
   <div class="dust-particle"></div></body>
 <style>
@@ -257,8 +261,6 @@
       "retina_detect": true
   });
 </script>
-
-</body>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");
@@ -274,30 +276,17 @@
         break;
       case "classroom":
         document.title = "Google Classroom";
-        favicon.href = "https://classroom.google.com/favicon.ico";
+        favicon.href = "https://www.gstatic.com/classroom/logo_square_rounded.svg";
         break;
       case "vocabulary":
         document.title = "Vocabulary.com";
         favicon.href = "https://www.vocabulary.com/favicon.ico";
         break;
       default:
-        document.title = "Games";
+        document.title = "ZenithHub";
         favicon.href = "favicon.ico";
     }
   });
 </script>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const audio = new Audio("media/lobby.mp3");
-    audio.loop = true;
-
-    // Check if music is enabled in localStorage
-    const musicEnabled = localStorage.getItem("musicEnabled") === "true";
-
-    if (musicEnabled) {
-      audio.play();
-    }
-  });
-</script>
+</body>
 </html>
